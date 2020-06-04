@@ -1,0 +1,12 @@
+@mixin patterned-bg {
+  background-color: $c-mine-shaft;
+  background-image: url('../img/bg.png');
+  background-repeat: repeat;
+}
+
+@mixin full-flex($dir: column) {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: $dir;
+}

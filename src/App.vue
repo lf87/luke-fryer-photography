@@ -1,28 +1,40 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div :class="['app', { 'app--mounted': isMounted }]" id="app">
+    <BannerComponent></BannerComponent>
+    <CategoriesComponent></CategoriesComponent>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BannerComponent from './components/BannerComponent.vue'
+import CategoriesComponent from './components/CategoriesComponent.vue'
+// import debounce from 'lodash/debounce'
 
 export default {
   name: 'App',
+  data: () => ({
+    isMounted: false
+  }),
   components: {
-    HelloWorld
+    BannerComponent,
+    CategoriesComponent
+  },
+  mounted () {
+    window.addEventListener('load', () => {
+      console.log('test') // runs only once
+      this.isMounted = true
+    })
   }
+  // updated: debounce(function () {
+  //   this.$nextTick(() => {
+  //     console.log('test') // runs only once
+  //     this.isMounted = true
+  //   })
+  // }, 250) // increase to ur needs
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); */
 </style>
