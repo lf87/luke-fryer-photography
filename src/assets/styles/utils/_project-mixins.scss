@@ -1,6 +1,6 @@
 @mixin patterned-bg {
   background-color: $c-mine-shaft;
-  background-image: url('../img/bg.png');
+  background-image: url("../img/bg.png");
   background-repeat: repeat;
 }
 
@@ -9,4 +9,48 @@
   position: relative;
   width: 100%;
   flex-direction: $dir;
+}
+
+@mixin large-heading() {
+  @include font-size(60px);
+  @include transition(opacity transform, 3s, $ease-out-quint);
+  transform: translate3d(0, 0.25rem, 0);
+  opacity: 0;
+  font-weight: 300;
+  font-family: $f-handwriting;
+  text-shadow: $text-shadow;
+  text-align: center;
+
+  .app--mounted & {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@mixin image-grid() {
+  position: relative;
+  padding-top: $gutter;
+  padding-right: $gutter;
+  padding-bottom: $gutter;
+  padding-left: $gutter;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+  gap: #{$gutter / 2};
+  grid-auto-rows: minmax(180px, auto);
+  grid-auto-flow: dense;
+}
+
+@mixin image-grid-item() {
+  position: relative;
+  display: flex;
+  flex-basis: 50%;
+  flex-grow: 1;
+  height: 14rem;
+  background-color: lighten($c-mine-shaft, 1.5%);
+  border-radius: 3px;
+  overflow: hidden;
+
+  &:nth-child(odd) {
+    background-color: lighten($c-mine-shaft, 3%);
+  }
 }

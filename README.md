@@ -1,4 +1,4 @@
-# luke-fryer-photographer
+# luke-fryer-photography
 
 ## Project setup
 ```

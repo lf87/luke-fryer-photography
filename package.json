@@ -1,5 +1,5 @@
 {
-  "name": "luke-fryer-photographer",
+  "name": "luke-fryer-photography",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -29,6 +29,7 @@
     "lodash": "^4.17.15",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "vue-router": "^3.3.2",
     "vue-template-compiler": "^2.6.11"
   }
 }

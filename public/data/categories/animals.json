@@ -1,0 +1,12 @@
+{
+  "largeHeading": "Animals",
+  "smallHeading": "",
+  "images": [
+    {
+      "file": "bears-playing.jpg",
+      "title": "Gondola",
+      "alt": "Gondola",
+      "desc": "Gondola photo"
+    }
+  ]
+}

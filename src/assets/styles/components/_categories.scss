@@ -1,49 +1,19 @@
 .categories {
-  @include full-flex(row);
-  padding-top: $vspace;
-  padding-right: $gutter;
-  padding-bottom: $vspace;
-  padding-left: $gutter;
-  width: calc(100% - 0.2rem);
-  margin-left: -0.1rem;
-  flex-wrap: wrap;
+  @include image-grid;
 }
 
 .categories__item {
-  position: relative;
-  display: flex;
-  flex-basis: 50%;
-  padding: 0.1rem;
-  flex-grow: 1;
-  height: 14rem;
+@include image-grid-item;
+}
 
-  @include bp(xs) {
-    flex-basis: 33.333%;
-  }
+.categories__item--span-2 {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
 
-  @include bp(sm) {
-    flex-basis: 25%;
-  }
-
-  @include bp(md) {
-    flex-basis: 20%;
-  }
-
-  // &:nth-of-type(2n + 1) {
-  //   @include bp(xs) {
-  //     flex-basis: 33.333%;
-  //   }
-  // }
-  // &:nth-of-type(2n + 4) {
-  //   @include bp(xs) {
-  //     flex-basis: 66.666%;
-  //   }
-  // }
-  // &:nth-of-type(2n + 1) {
-  //   @include bp(xs) {
-  //     flex-basis: 25%;
-  //   }
-  // }
+.categories__item--span-3 {
+  grid-column-end: span 3;
+  grid-row-end: span 4;
 }
 
 .categories__img {

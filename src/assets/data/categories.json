@@ -1,0 +1,18 @@
+[
+  {
+    "animals": [
+      {
+        "slug": "animals",
+        "title": "Animals",
+        "description": "Animals photos"
+      }
+    ],
+    "people": [
+      {
+        "slug": "people",
+        "title": "People",
+        "description": "People photos"
+      }
+    ]
+  }
+]

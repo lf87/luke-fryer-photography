@@ -1,3 +1,21 @@
 .category {
+  @include full-flex;
+}
 
+.category__heading {
+  @include large-heading;
+  transform: translate3d(0, 0.25rem, 0);
+}
+
+.category__grid {
+  @include image-grid;
+}
+
+.category__grid-item {
+  @include image-grid-item;
+}
+
+.category__grid-img {
+  object-fit: cover;
+  width: 100%;
 }
