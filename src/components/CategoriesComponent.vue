@@ -1,6 +1,7 @@
 <template>
   <section class="categories">
     <!-- <category></category> -->
+    <!-- show first iamge from each cat -->
     <router-link class="categories__item" to="austria" >
       <img class="categories__img" src="/img/photography/nature/placeholder.jpg" loading="lazy" alt="placeholder" />
       <div class="categories__heading">

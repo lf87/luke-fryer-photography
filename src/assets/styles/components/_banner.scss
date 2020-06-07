@@ -11,6 +11,8 @@
 }
 
 .banner__img {
+  @include transition(opacity, 1s, $ease-out-cubic, 0.75s);
+  opacity: 1;
   // filter: grayscale() ;
   // filter: blur(1px);
   filter: sepia(30%) brightness(0.75) grayscale(0.5);
@@ -26,11 +28,15 @@
   // opacity: 0.5;
   // transform: translate3d(-4rem, 0, 0);
 
-  // .app--mounted & {
+  // .transitions-active & {
   //   transform: translate3d(0, 0, 0);
   //   opacity: 1;
   //   opacity: 0.5;
   // }
+}
+
+.banner__img--fade-out {
+  opacity: 0;
 }
 
 .banner__heading {
@@ -46,13 +52,13 @@
   @include font-size(60px);
   // @include transition(opacity transform, 2s, $ease-out-quad, 0.333s);
   @include transition(opacity transform, 3s, $ease-out-quint);
-  transform: translate3d(.5rem, 0, 0);
+  transform: translate3d(0.5rem, 0, 0);
   opacity: 0;
   font-weight: 300;
   font-family: $f-handwriting;
   text-shadow: $text-shadow;
 
-  .app--mounted & {
+  .transitions-active & {
     transform: translate3d(0, 0, 0);
     opacity: 1;
   }
@@ -62,13 +68,13 @@
   @include font-size(20px);
   // @include transition(opacity transform, 1.666s, $ease-out-quad, 0.666s);
   @include transition(opacity transform, 3s, $ease-out-quint);
-  transform: translate3d(-.5rem, 0, 0);
+  transform: translate3d(-0.5rem, 0, 0);
   opacity: 0;
   text-align: center;
   letter-spacing: 1px;
   text-shadow: $text-shadow;
 
-  .app--mounted & {
+  .transitions-active & {
     transform: translate3d(0, 0, 0);
     opacity: 1;
   }

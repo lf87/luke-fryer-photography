@@ -21,7 +21,7 @@
   text-shadow: $text-shadow;
   text-align: center;
 
-  .app--mounted & {
+  .transitions-active & {
     transform: translate3d(0, 0, 0);
     opacity: 1;
   }
