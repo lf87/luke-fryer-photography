@@ -1,7 +1,7 @@
 <template>
   <div v-if="dataFetched" class="home">
-    <BannerComponent :data="data" :categories="categories" :dataFetched="dataFetched"></BannerComponent>
-    <CategoriesComponent ref="categories"></CategoriesComponent>
+    <BannerComponent :data="data" :categories="categories"></BannerComponent>
+    <CategoriesComponent :data="data"  ref="categories"></CategoriesComponent>
   </div>
 </template>
 

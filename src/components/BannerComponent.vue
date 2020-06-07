@@ -1,5 +1,5 @@
 <template>
-  <header class="banner" v-if="dataFetched">
+  <header class="banner">
     <img
       v-if="selectCategory"
       class="banner__img banner__img--category-overlay"
@@ -7,11 +7,22 @@
       alt="placeholder"
     />
     <img
+      v-if="currentRouteName === 'HomePage'"
+      :class="['banner__img', { 'banner__img--fade-out': selectCategory }]"
+      :src="`/img/photography/${activeCategory}/${data[0].images[1].file}`"
+      alt="Beautiful photo of the Austrian landscape and a gondola making its way down through the mountains"
+    />
+    <img
+      v-else
       :class="['banner__img', { 'banner__img--fade-out': selectCategory }]"
       :src="`/img/photography/${activeCategory}/${data[getActiveCategoryIndex].images[0].file}`"
       alt="placeholder"
     />
-    <h1 class="banner__heading">
+    <h1 v-if="currentRouteName === 'HomePage'" class="banner__heading">
+      <span class="banner__large-text">Luke Fryer</span>
+      <span class="banner__small-text">Photographer</span>
+    </h1>
+    <h1 v-else class="banner__heading">
       <span class="banner__large-text">{{ data[getActiveCategoryIndex].largeHeading }}</span>
       <span class="banner__small-text">{{ data[getActiveCategoryIndex].smallHeading }}</span>
     </h1>
@@ -23,11 +34,11 @@ import EventBus from '@/event-bus/event-bus.js'
 
 export default {
   name: 'BannerComponent',
-  props: ['data', 'category', 'categories', 'dataFetched'],
+  props: ['data', 'category', 'categories'],
   data () {
     return {
       selectCategory: '',
-      activeCategory: 'nature'
+      activeCategory: 'austria'
     }
   },
   mounted () {
@@ -54,14 +65,14 @@ export default {
   },
   computed: {
     getActiveCategoryIndex () {
-      console.log(this.categories.indexOf(this.activeCategory))
-      // console.log(this.categories.indexOf(this.category))
       return this.categories.indexOf(this.activeCategory)
     },
     getSelectCategoryIndex () {
-      console.log(this.categories.indexOf(this.activeCategory))
-      // console.log(this.categories.indexOf(this.category))
       return this.categories.indexOf(this.selectCategory)
+    },
+    currentRouteName () {
+      console.log(this.$route.name)
+      return this.$route.name
     }
   }
   // watch: {

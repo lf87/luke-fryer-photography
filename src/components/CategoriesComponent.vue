@@ -2,96 +2,26 @@
   <section class="categories">
     <!-- <category></category> -->
     <!-- show first iamge from each cat -->
-    <router-link class="categories__item" to="austria" >
-      <img class="categories__img" src="/img/photography/austria/gondola.jpg" loading="lazy" alt="placeholder" />
-      <div class="categories__heading">
-        <span class="categories__text">Category name</span>
-      </div>
-    </router-link>
-    <div class="categories__item">
-      <img class="categories__img" src="/img/photography/nature/placeholder2.jpg" loading="lazy" alt="placeholder" />
-      <div class="categories__heading">
-        <span class="categories__text">Category name</span>
-      </div>
-    </div>
-    <div class="categories__item">
-      <img class="categories__img" src="/img/photography/nature/placeholder3.jpg" loading="lazy" alt="placeholder" />
-      <div class="categories__heading">
-        <span class="categories__text">Category name</span>
-      </div>
-    </div>
-    <div class="categories__item">
-      <img class="categories__img" src="/img/photography/nature/placeholder3.jpg" loading="lazy" alt="placeholder" />
-      <div class="categories__heading">
-        <span class="categories__text">Category name</span>
-      </div>
-    </div>
-    <div class="categories__item">
-      <img class="categories__img" src="/img/photography/nature/placeholder3.jpg" loading="lazy" alt="placeholder" />
-      <div class="categories__heading">
-        <span class="categories__text">Category name</span>
-      </div>
-    </div>
-    <div class="categories__item">
-      <img class="categories__img" src="/img/photography/nature/placeholder3.jpg" loading="lazy" alt="placeholder" />
-      <div class="categories__heading">
-        <span class="categories__text">Category name</span>
-      </div>
-    </div>
-    <div class="categories__item">
-      <img class="categories__img" src="/img/photography/nature/placeholder4.jpg" loading="lazy" alt="placeholder" />
-      <div class="categories__heading">
-        <span class="categories__text">Category name</span>
-      </div>
-    </div>
-    <div class="categories__item">
-      <img class="categories__img" src="/img/photography/nature/placeholder4.jpg" loading="lazy" alt="placeholder" />
-      <div class="categories__heading">
-        <span class="categories__text">Category name</span>
-      </div>
-    </div>
-    <div class="categories__item">
-      <img class="categories__img" src="/img/photography/nature/placeholder4.jpg" loading="lazy" alt="placeholder" />
-      <div class="categories__heading">
-        <span class="categories__text">Category name</span>
-      </div>
-    </div>
-    <div class="categories__item">
-      <img class="categories__img" src="/img/photography/nature/placeholder4.jpg" loading="lazy" alt="placeholder" />
-      <div class="categories__heading">
-        <span class="categories__text">Category name</span>
-      </div>
-    </div>
-    <div class="categories__item">
-      <img class="categories__img" src="/img/photography/nature/placeholder5.jpg" loading="lazy" alt="placeholder" />
-      <div class="categories__heading">
-        <span class="categories__text">Category name</span>
-      </div>
-    </div>
-    <div class="categories__item">
-      <img class="categories__img" src="/img/photography/nature/placeholder5.jpg" loading="lazy" alt="placeholder" />
-      <div class="categories__heading">
-        <span class="categories__text">Category name</span>
-      </div>
-    </div>
-    <div class="categories__item">
-      <img class="categories__img" src="/img/photography/nature/placeholder5.jpg" loading="lazy" alt="placeholder" />
-      <div class="categories__heading">
-        <span class="categories__text">Category name</span>
-      </div>
-    </div>
-    <div class="categories__item">
-      <img class="categories__img" src="/img/photography/nature/placeholder5.jpg" loading="lazy" alt="placeholder" />
-      <div class="categories__heading">
-        <span class="categories__text">Category name</span>
-      </div>
-    </div>
+    <template v-for="category in data">
+      <router-link class="categories__item" :to="category.name" :key="category.index">
+        <img
+          class="categories__img"
+          :src="`/img/photography/${category.name}/${category.images[0].file}`"
+          loading="lazy"
+          alt="placeholder"
+        />
+        <div class="categories__heading">
+          <span class="categories__text">{{category.name}}</span>
+        </div>
+      </router-link>
+    </template>
   </section>
 </template>
 
 <script>
 export default {
   name: 'CategoriesComponent',
+  props: ['data'],
   components: {
     // categoryComponent
   }

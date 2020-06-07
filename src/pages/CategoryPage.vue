@@ -6,11 +6,11 @@
       :categories="categories"
       :dataFetched="dataFetched"
     ></BannerComponent>
-    <!-- <section class="category__grid">
+    <section class="category__grid">
       <div
         class="category__grid-item"
-        v-for="image in data[activeCategoryIndex].images"
-        v-bind:key="image.index"
+        v-for="image in data[getActiveCategoryIndex].images"
+        :key="image.index"
       >
         <img
           class="category__grid-img"
@@ -18,7 +18,7 @@
           alt="alt"
         />
       </div>
-    </section> -->
+    </section>
   </main>
 </template>
 
@@ -32,41 +32,14 @@ export default {
   components: {
     BannerComponent
   },
-  data () {
-    return {
-      activeCategory: '',
-      activeCategoryIndex: ''
-    }
-  },
   mounted () {
     this.activeCategoryIndex = this.categories.indexOf(this.category)
-    // fetch(`/data/categories/${this.category}.json`)
-    //   .then((response) =>
-    //     response.json()
-    //       // eslint-disable-next-line no-console
-    //       .catch(err => { console.error(`'${err}' happened!`); return {} }))
-    //   .then((json) => {
-    //     this.data = json
-    //   })
-
-    // this.data = this.category
-
     EventBus.$emit('categorySelected', this.category)
+  },
+  computed: {
+    getActiveCategoryIndex () {
+      return this.categories.indexOf(this.category)
+    }
   }
-  // afterEach (to, from, next) {
-  //   // Emitted to App.vue
-  //   EventBus.$emit('transitionsActive', true)
-  // },
-  // beforeRouteEnter (to, from, next) {
-  //   // Emitted to App.vue
-  //   EventBus.$emit('transitionsActive', true)
-  // },
-  // beforeRouteEnter (to, from, next) {
-  //   this.activeCategory = to.params
-  //   console.log('hiya')
-  //   // Emitted to App.vue
-  //   // EventBus.$emit('transitionsActive', true)
-  //   next()
-  // }
 }
 </script>
