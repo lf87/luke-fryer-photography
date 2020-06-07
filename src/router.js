@@ -27,8 +27,19 @@ const router = new Router({
 
 router.afterEach((to, from) => {
   // Emitted to App.vue
-  console.log('in')
-  EventBus.$emit('transitionsActive')
+  console.log(to.name)
+  window.addEventListener('load', () => {
+    if (to.name === 'HomePage') {
+      console.log('zzz')
+      EventBus.$emit('transitionsActive', true)
+    }
+  })
+
+  if (to.name === 'CategoryPage') {
+    setTimeout(() => {
+      EventBus.$emit('transitionsActive', true)
+    }, 50)
+  }
 })
 
 export default router

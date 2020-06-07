@@ -3,7 +3,7 @@
     <!-- <category></category> -->
     <!-- show first iamge from each cat -->
     <router-link class="categories__item" to="austria" >
-      <img class="categories__img" src="/img/photography/nature/placeholder.jpg" loading="lazy" alt="placeholder" />
+      <img class="categories__img" src="/img/photography/austria/gondola.jpg" loading="lazy" alt="placeholder" />
       <div class="categories__heading">
         <span class="categories__text">Category name</span>
       </div>

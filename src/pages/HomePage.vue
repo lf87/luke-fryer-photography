@@ -9,6 +9,7 @@
 import BannerComponent from '@/components/BannerComponent.vue'
 import CategoriesComponent from '@/components/CategoriesComponent.vue'
 import EventBus from '@/event-bus/event-bus.js'
+import scroll from '@/assets/js/vendor/scroll.js'
 
 export default {
   name: 'HomePage',
@@ -18,21 +19,26 @@ export default {
     CategoriesComponent
   },
   beforeRouteLeave (to, from, next) {
-    // Emitted to App.vue
-    EventBus.$emit('transitionsActive')
-    console.log(to.params.category)
+    const updateSelectedCategory = () => {
+      EventBus.$emit('categorySelected', to.params.category)
+    }
 
-    // EMitted to BannerComponent.vue
-    EventBus.$emit('categorySelected', to.params.category)
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    })
-    // this.$refs.categories.$el.style.display = 'none' // YES !!! apply all default states in SCSS and do the transition state in here. do same on cat page
+    // Emitted to BannerComponent.vue
+    scroll(
+      0,
+      500,
+      'easeOutQuad',
+      updateSelectedCategory
+    )
+
+    setTimeout(() => {
+      // Emitted to App.vue
+      EventBus.$emit('transitionsActive', false)
+    }, 50)
+
     setTimeout(() => {
       next()
-    }, 2000)
+    }, 1250)
   }
 }
 </script>

@@ -3,17 +3,17 @@
     <img
       v-if="selectCategory"
       class="banner__img banner__img--category-overlay"
-      :src="`/img/photography/${selectCategory}/${data[selectCategoryIndex].images[0].file}`"
+      :src="`/img/photography/${selectCategory}/${data[getSelectCategoryIndex].images[0].file}`"
       alt="placeholder"
     />
     <img
       :class="['banner__img', { 'banner__img--fade-out': selectCategory }]"
-      :src="`/img/photography/${activeCategory}/${data[activeCategoryIndex].images[0].file}`"
+      :src="`/img/photography/${activeCategory}/${data[getActiveCategoryIndex].images[0].file}`"
       alt="placeholder"
     />
     <h1 class="banner__heading">
-      <span class="banner__large-text">{{ data[activeCategoryIndex].largeHeading }}</span>
-      <span class="banner__small-text">{{ data[activeCategoryIndex].smallHeading }}</span>
+      <span class="banner__large-text">{{ data[getActiveCategoryIndex].largeHeading }}</span>
+      <span class="banner__small-text">{{ data[getActiveCategoryIndex].smallHeading }}</span>
     </h1>
   </header>
 </template>
@@ -27,20 +27,17 @@ export default {
   data () {
     return {
       selectCategory: '',
-      selectCategoryInde: '',
-      activeCategory: 'nature',
-      activeCategoryIndex: ''
+      activeCategory: 'nature'
     }
   },
   mounted () {
     if (!this.category) {
       // If home page
-      this.category = 'nature'
+      // this.category = this.activeCategory
     } else {
       // If category page
       this.activeCategory = this.category
     }
-    this.activeCategoryIndex = this.categories.indexOf(this.category)
 
     // Emitted from HomePage.vue
     EventBus.$on('categorySelected', (category) => {
@@ -54,6 +51,24 @@ export default {
       this.selectCategory = category
       this.transitionsActive = false
     })
+  },
+  computed: {
+    getActiveCategoryIndex () {
+      console.log(this.categories.indexOf(this.activeCategory))
+      // console.log(this.categories.indexOf(this.category))
+      return this.categories.indexOf(this.activeCategory)
+    },
+    getSelectCategoryIndex () {
+      console.log(this.categories.indexOf(this.activeCategory))
+      // console.log(this.categories.indexOf(this.category))
+      return this.categories.indexOf(this.selectCategory)
+    }
   }
+  // watch: {
+  //   dataFetched: function (value) {
+  //     console.log('hhhhhhhhhh')
+  //     // EventBus.$emit('transitionsActive', true)
+  //   }
+  // }
 }
 </script>

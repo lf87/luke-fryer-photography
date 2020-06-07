@@ -11,7 +11,7 @@
 }
 
 .banner__img {
-  @include transition(opacity, 1s, $ease-out-cubic, 0.75s);
+  @include transition(opacity, 0.5s, $ease-out-cubic, 0.25s);
   opacity: 1;
   // filter: grayscale() ;
   // filter: blur(1px);
@@ -51,7 +51,7 @@
 .banner__large-text {
   @include font-size(60px);
   // @include transition(opacity transform, 2s, $ease-out-quad, 0.333s);
-  @include transition(opacity transform, 3s, $ease-out-quint);
+  @include transition(opacity transform, 2.5s, $ease-out-quint);
   transform: translate3d(0.5rem, 0, 0);
   opacity: 0;
   font-weight: 300;

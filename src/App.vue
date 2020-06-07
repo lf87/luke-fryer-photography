@@ -1,6 +1,11 @@
 <template>
   <div :class="['app', { 'transitions-active': transitionsActive }]" id="app">
-    <router-view :dataFetched="dataFetched" :data="data" :categories="categories" :key="$route.path"></router-view>
+    <router-view
+      :dataFetched="dataFetched"
+      :data="data"
+      :categories="categories"
+      :key="$route.path"
+    ></router-view>
   </div>
 </template>
 
@@ -37,13 +42,13 @@ export default {
     }
   },
   mounted () {
-    window.addEventListener('load', () => {
-      this.transitionsActive = true
-    })
+    // window.addEventListener('load', () => {
+    //   this.transitionsActive = true
+    // })
 
     // Emitted from HomePage.vue
     EventBus.$on('transitionsActive', (bool) => {
-      this.transitionsActive = false
+      !bool ? this.transitionsActive = false : this.transitionsActive = true
     })
   }
 }

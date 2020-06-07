@@ -1,6 +1,9 @@
 @font-face {
-  font-family: 'freight-big-pro, sans-serif';
+  font-family: 'FreightBigProMedium';
+  src: url('/assets/fonts/subset-FreightBigProMedium-Regular.woff2') format('woff2'),
+      url('/assets/fonts/subset-FreightBigProMedium-Regular.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
   font-display: swap;
-  font-weight: 400;
-  src: url('/assets/fonts/freight-big-pro-medium.otf');
 }
+

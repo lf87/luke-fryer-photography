@@ -1,15 +1,24 @@
 <template>
   <main v-if="dataFetched" class="category">
-    <BannerComponent :data="data" :category="category" :categories="categories" :dataFetched="dataFetched"></BannerComponent>
-    <section  class="category__grid">
-      <div class="category__grid-item" v-for="image in data[activeCategoryIndex].images" v-bind:key="image.index">
+    <BannerComponent
+      :data="data"
+      :category="category"
+      :categories="categories"
+      :dataFetched="dataFetched"
+    ></BannerComponent>
+    <!-- <section class="category__grid">
+      <div
+        class="category__grid-item"
+        v-for="image in data[activeCategoryIndex].images"
+        v-bind:key="image.index"
+      >
         <img
           class="category__grid-img"
           :src="`/img/photography/${category}/${image.file}`"
           alt="alt"
         />
       </div>
-    </section>
+    </section> -->
   </main>
 </template>
 
@@ -43,16 +52,21 @@ export default {
     // this.data = this.category
 
     EventBus.$emit('categorySelected', this.category)
-  },
-  afterEach (to, from, next) {
-    // Emitted to App.vue
-    EventBus.$emit('transitionsActive')
-  },
-  beforeRouteUpdate (to, from, next) {
-    this.activeCategory = to.params
-    // called before the route that renders this component is confirmed.
-    // does NOT have access to `this` component instance,
-    // because it has not been created yet when this guard is called!
   }
+  // afterEach (to, from, next) {
+  //   // Emitted to App.vue
+  //   EventBus.$emit('transitionsActive', true)
+  // },
+  // beforeRouteEnter (to, from, next) {
+  //   // Emitted to App.vue
+  //   EventBus.$emit('transitionsActive', true)
+  // },
+  // beforeRouteEnter (to, from, next) {
+  //   this.activeCategory = to.params
+  //   console.log('hiya')
+  //   // Emitted to App.vue
+  //   // EventBus.$emit('transitionsActive', true)
+  //   next()
+  // }
 }
 </script>

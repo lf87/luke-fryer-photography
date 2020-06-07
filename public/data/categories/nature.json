@@ -3,16 +3,16 @@
   "smallHeading": "",
   "images": [
     {
-      "file": "placeholder.jpg",
+      "file": "bears.jpg",
       "title": "placeholder",
       "alt": "placeholder",
       "desc": "placeholder photo"
     },
     {
-      "file": "bears-playing.jpg",
-      "title": "bears-playing",
-      "alt": "bears-playing",
-      "desc": "bears-playing photo"
+      "file": "placeholder.jpg",
+      "title": "placeholder",
+      "alt": "placeholder",
+      "desc": "placeholder photo"
     }
   ]
 }
