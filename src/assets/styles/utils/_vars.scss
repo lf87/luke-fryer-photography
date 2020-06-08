@@ -45,9 +45,15 @@ $ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
 $ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
 $ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
+// Z-index
+$z-gallery: 1;
+$z-gallery__btn: 2;
+$z-gallery__btn-close: 2;
+
 // Misc
 $f-primary: "FreightBigProMedium";
 $f-handwriting: "FreightBigProMedium";
 $gutter: 1rem;
 $vspace: 2rem;
 $text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+$transition-timing: 0.25s;

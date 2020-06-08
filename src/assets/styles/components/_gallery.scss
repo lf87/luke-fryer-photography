@@ -1,0 +1,58 @@
+.gallery {
+  @include full-flex();
+  @include transition(opacity);
+  background-color: rgba($c-black, 0.85);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: $z-gallery;
+
+  &.active {
+    pointer-events: all;
+    opacity: 1;
+  }
+}
+
+.gallery__img {
+  width: 100%;
+}
+
+.gallery__img--hide {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+}
+.gallery__btn {
+  display: flex;
+  position: absolute;
+  top: calc(50% - 2.5rem);
+  width: 5rem;
+  height: 5rem;
+  background-color: $c-white;
+  z-index: $z-gallery__btn;
+}
+
+.gallery__btn--prev {
+  left: 2rem;
+}
+
+.gallery__btn-close{
+  display: flex;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: $c-white;
+  z-index: $z-gallery__btn-close;
+}
+
+.gallery__btn--next {
+  right: 2rem;
+}

@@ -26,12 +26,17 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # To do
 
-* down arrow on the banner (may as well use plugin to make it scroll)
 * image popup component (on category component)
+* down arrow on the banner (may as well use plugin to make it scroll)
+* categories component styling
+* src-set for images
+* favicons etc.
 * clean up junk files/code/lint
 * test test test!
-* favicons etc.
 * populate with content!
 
+# Issues
+* banner refloaw issue on mobile (firefox i think)
+
 # Extras
-* Put on the the play store (purely for testing purposes)
+* put on the the play store (purely for testing purposes)

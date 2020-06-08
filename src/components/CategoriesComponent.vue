@@ -1,7 +1,5 @@
 <template>
   <section class="categories">
-    <!-- <category></category> -->
-    <!-- show first iamge from each cat -->
     <template v-for="category in data">
       <router-link class="categories__item" :to="category.name" :key="category.index">
         <img
@@ -19,11 +17,9 @@
 </template>
 
 <script>
+
 export default {
   name: 'CategoriesComponent',
-  props: ['data'],
-  components: {
-    // categoryComponent
-  }
+  props: ['data']
 }
 </script>
