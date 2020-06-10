@@ -9,7 +9,7 @@
         /img/photography/${category.name}/${category.images[0].file}-1920.jpg 1920w,
         /img/photography/${category.name}/${category.images[0].file}-1440.jpg 1440w,
         /img/photography/${category.name}/${category.images[0].file}-1080.jpg 1080w`"
-          :src="require(`@/assets/img/photography/${category.name}/${category.images[0].file}-1920.jpg`)"
+          :src="`/img/photography/${category.name}/${category.images[0].file}-1920.jpg`"
           loading="lazy"
           alt="placeholder"
         />

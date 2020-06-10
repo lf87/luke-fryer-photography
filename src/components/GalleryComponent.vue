@@ -7,7 +7,7 @@
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1920.jpg 1920w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1440.jpg 1440w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1080.jpg 1080w`"
-      :src="require(`@/assets/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-2560.jpg`)"
+      :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-2560.jpg`"
       loading="lazy"
       alt="placeholder"
     />
@@ -19,7 +19,7 @@
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1920.jpg 1920w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1440.jpg 1440w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1080.jpg 1080w`"
-      :src="require(`@/assets/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex - 1].file}-2560.jpg`)"
+      :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex - 1].file}-2560.jpg`"
       loading="lazy"
       alt="first"
     />
@@ -31,7 +31,7 @@
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1920.jpg 1920w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1440.jpg 1440w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1080.jpg 1080w`"
-      :src="require(`@/assets/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex + 1].file}-2560.jpg`)"
+      :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex + 1].file}-2560.jpg`"
       loading="lazy"
       alt="last"
     />

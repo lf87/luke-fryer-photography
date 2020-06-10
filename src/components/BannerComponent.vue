@@ -12,35 +12,18 @@
         /img/photography/${selectCategory}/${data[getSelectCategoryIndex].images[0].file}-1080.jpg 1080w,
         /img/photography/${activeCategory}/${data[2].images[2].file}-768.jpg 768w,
         /img/photography/${activeCategory}/${data[2].images[2].file}-480.jpg 480w`"
-        :src="require(`@/assets/img/photography/${selectCategory}/${data[getSelectCategoryIndex].images[0].file}-1920.jpg`)"
+        :src="`/img/photography/${selectCategory}/${data[getSelectCategoryIndex].images[0].file}-1920.jpg`"
         :alt="data[getActiveCategoryIndex].images[0].alt"
       />
       <img
         v-if="currentRouteName === 'HomePage'"
         :class="['banner__img', { 'banner__img--fade-out': selectCategory }]"
-        media="(orientation: landscape)"
         sizes="(max-width: 2560px) 100vw, 2560px"
         :srcset="`/img/photography/${activeCategory}/${data[2].images[2].file}-2560.jpg 2560w,
         /img/photography/${activeCategory}/${data[2].images[2].file}-1920.jpg 1920w,
         /img/photography/${activeCategory}/${data[2].images[2].file}-1440.jpg 1440w,
-        /img/photography/${activeCategory}/${data[2].images[2].file}-1080.jpg 1080w,
-        /img/photography/${activeCategory}/${data[2].images[2].file}-768.jpg 768w,
-        /img/photography/${activeCategory}/${data[2].images[2].file}-480.jpg 480w`"
-        :src="require(`@/assets/img/photography/${activeCategory}/${data[2].images[2].file}-1920.jpg`)"
-        :alt="data[getActiveCategoryIndex].images[2].alt"
-      />
-      <img
-        v-if="currentRouteName === 'HomePage'"
-        :class="['banner__img', { 'banner__img--fade-out': selectCategory }]"
-        media="(orientation: portrait)"
-        sizes="(max-width: 2560px) 100vw, 2560px"
-        :srcset="`/img/photography/${activeCategory}/${data[2].images[2].file}-2560.jpg 2560w,
-        /img/photography/${activeCategory}/${data[2].images[2].file}-1920.jpg 1920w,
-        /img/photography/${activeCategory}/${data[2].images[2].file}-1440.jpg 1440w,
-        /img/photography/${activeCategory}/${data[2].images[2].file}-1080.jpg 1080w,
-        /img/photography/${activeCategory}/${data[2].images[2].file}-768.jpg 768w,
-        /img/photography/${activeCategory}/${data[2].images[2].file}-2560.jpg 480w`"
-        :src="require(`@/assets/img/photography/${activeCategory}/${data[2].images[2].file}-1920.jpg`)"
+        /img/photography/${activeCategory}/${data[2].images[2].file}-1080.jpg 1080w`"
+        :src="`/img/photography/${activeCategory}/${data[2].images[2].file}-1920.jpg`"
         :alt="data[getActiveCategoryIndex].images[2].alt"
       />
       <img
@@ -51,10 +34,8 @@
         :srcset="`/img/photography/${activeCategory}/${data[getActiveCategoryIndex].images[0].file}-2560.jpg 2560w,
         /img/photography/${activeCategory}/${data[getActiveCategoryIndex].images[0].file}-1920.jpg 1920w,
         /img/photography/${activeCategory}/${data[getActiveCategoryIndex].images[0].file}-1440.jpg 1440w,
-        /img/photography/${activeCategory}/${data[getActiveCategoryIndex].images[0].file}-1080.jpg 1080w,
-        /img/photography/${activeCategory}/${data[2].images[2].file}-768.jpg 768w,
-        /img/photography/${activeCategory}/${data[2].images[2].file}-480.jpg 480w`"
-        :src="require(`@/assets/img/photography/${activeCategory}/${data[getActiveCategoryIndex].images[0].file}-1920.jpg`)"
+        /img/photography/${activeCategory}/${data[getActiveCategoryIndex].images[0].file}-1080.jpg 1080w`"
+        :src="`/img/photography/${activeCategory}/${data[getActiveCategoryIndex].images[0].file}-1920.jpg`"
         :alt="data[getActiveCategoryIndex].images[0].alt"
       />
     </picture>
