@@ -4,7 +4,12 @@
       <router-link class="categories__item" :to="category.name" :key="category.index">
         <img
           class="categories__img"
-          :src="`/img/photography/${category.name}/${category.images[0].file}-2560.jpg`"
+          sizes="(max-width: 2560px) 100vw, 2560px"
+          :srcset="`/img/photography/${category.name}/${category.images[0].file}-2560.jpg 2560w,
+        /img/photography/${category.name}/${category.images[0].file}-1920.jpg 1920w,
+        /img/photography/${category.name}/${category.images[0].file}-1440.jpg 1440w,
+        /img/photography/${category.name}/${category.images[0].file}-1080.jpg 1080w`"
+          :src="`/img/photography/${category.name}/${category.images[0].file}-1920.jpg`"
           loading="lazy"
           alt="placeholder"
         />

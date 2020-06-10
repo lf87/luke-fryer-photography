@@ -15,6 +15,11 @@
         <button class="category__grid-img-btn" v-on:click="activateGallery(galleryActive, index)">
           <img
             class="category__grid-img"
+            sizes="(max-width: 2560px) 100vw, 2560px"
+            :srcset="`/img/photography/${category}/${image.file}-2560.jpg 2560w,
+        /img/photography/${category}/${image.file}-1920.jpg 1920w,
+        /img/photography/${category}/${image.file}-1440.jpg 1440w,
+        /img/photography/${category}/${image.file}-1080.jpg 1080w`"
             :src="`/img/photography/${category}/${image.file}-2560.jpg`"
             alt="alt"
           />

@@ -19,8 +19,11 @@
 }
 
 .gallery__img {
-  max-width: 100%;
+  // max-width: 100%;
+  // width: 2560px;
+  // height: 1440px;
   max-height: 100%;
+  max-width: $app-max-width;
 }
 
 .gallery__img--hide {
@@ -43,7 +46,7 @@
   left: 2rem;
 }
 
-.gallery__btn-close{
+.gallery__btn-close {
   display: flex;
   position: absolute;
   top: 1rem;
