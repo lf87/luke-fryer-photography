@@ -20,7 +20,7 @@
         /img/photography/${category}/${image.file}-1920.jpg 1920w,
         /img/photography/${category}/${image.file}-1440.jpg 1440w,
         /img/photography/${category}/${image.file}-1080.jpg 1080w`"
-            :src="`/img/photography/${category}/${image.file}-2560.jpg`"
+            :src="require(`@/assets/img/photography/${category}/${image.file}-2560.jpg`)"
             alt="alt"
           />
         </button>
