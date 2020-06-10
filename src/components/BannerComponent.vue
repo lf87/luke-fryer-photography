@@ -3,19 +3,25 @@
     <img
       v-if="selectCategory"
       class="banner__img banner__img--category-overlay"
-      :src="`/img/photography/${selectCategory}/${data[getSelectCategoryIndex].images[0].file}`"
+      sizes="(max-width: 2560px) 100vw, 2560px"
+      :srcset="`/img/photography/${selectCategory}/${data[getSelectCategoryIndex].images[0].file}-2560.jpg`"
+      :src="`/img/photography/${selectCategory}/${data[getSelectCategoryIndex].images[0].file}-2560.jpg`"
       alt="placeholder"
     />
     <img
       v-if="currentRouteName === 'HomePage'"
       :class="['banner__img', { 'banner__img--fade-out': selectCategory }]"
-      :src="`/img/photography/${activeCategory}/${data[0].images[1].file}`"
+      sizes="(max-width: 2560px) 100vw, 2560px"
+      :srcset="`/img/photography/${activeCategory}/${data[2].images[2].file}-2560.jpg`"
+      :src="`/img/photography/${activeCategory}/${data[2].images[2].file}-2560.jpg`"
       alt="Beautiful photo of the Austrian landscape and a gondola making its way down through the mountains"
     />
     <img
       v-else
       :class="['banner__img', { 'banner__img--fade-out': selectCategory }]"
-      :src="`/img/photography/${activeCategory}/${data[getActiveCategoryIndex].images[0].file}`"
+      sizes="(max-width: 2560px) 100vw, 2560px"
+      :srcset="`/img/photography/${activeCategory}/${data[getActiveCategoryIndex].images[0].file}-2560.jpg`"
+      :src="`/img/photography/${activeCategory}/${data[getActiveCategoryIndex].images[0].file}-2560.jpg`"
       alt="placeholder"
     />
     <h1 v-if="currentRouteName === 'HomePage'" class="banner__heading">

@@ -2,21 +2,21 @@
   <section :class="['gallery', { 'active': galleryActive }]" v-on:click.self="closeGallery">
     <img
       class="gallery__img"
-      :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}`"
+      :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-2560.jpg`"
       loading="lazy"
       alt="placeholder"
     />
     <img
       v-if="currentImageIndex !== 0"
       class="gallery__img--hide"
-      :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex - 1].file}`"
+      :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex - 1].file}-2560.jpg`"
       loading="lazy"
       alt="first"
     />
     <img
       v-if="currentImageIndex !== getCategoryImagesLength"
       class="gallery__img--hide"
-      :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex + 1].file}`"
+      :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex + 1].file}-2560.jpg`"
       loading="lazy"
       alt="last"
     />

@@ -15,7 +15,7 @@
         <button class="category__grid-img-btn" v-on:click="activateGallery(galleryActive, index)">
           <img
             class="category__grid-img"
-            :src="`/img/photography/${category}/${image.file}`"
+            :src="`/img/photography/${category}/${image.file}-2560.jpg`"
             alt="alt"
           />
         </button>
@@ -37,7 +37,7 @@ import BannerComponent from '@/components/BannerComponent.vue'
 import EventBus from '@/event-bus/event-bus.js'
 
 export default {
-  name: 'category',
+  name: 'categoryPage',
   props: ['data', 'category', 'categories', 'dataFetched'],
   components: {
     BannerComponent,

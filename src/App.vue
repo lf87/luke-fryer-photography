@@ -16,7 +16,23 @@ export default {
   name: 'App',
   data: () => ({
     transitionsActive: false,
-    categories: ['austria', 'nature'],
+    categories: ['amsterdam',
+      'astrophotography',
+      'austria',
+      'carpathians',
+      'crete',
+      'croatia',
+      'devon',
+      'fireworks',
+      'formula-1',
+      'fuerteventura',
+      'gdansk',
+      'lviv',
+      'macro',
+      'nature',
+      'scafell-pike',
+      'scarborough',
+      'scotland'],
     data: [],
     dataFetched: false
   }),
@@ -32,10 +48,12 @@ export default {
             // eslint-disable-next-line no-console
             .catch(err => { console.error(`'${err}' happened!`); return {} }))
         .then((json) => {
+          console.log(json)
           this.data.push(json)
 
           loopIndex++
           if (loopIndex === categoriesLength) {
+            // Signal data fetched upon completion
             this.dataFetched = true
           }
         })

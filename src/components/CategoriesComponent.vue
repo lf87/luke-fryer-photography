@@ -4,7 +4,7 @@
       <router-link class="categories__item" :to="category.name" :key="category.index">
         <img
           class="categories__img"
-          :src="`/img/photography/${category.name}/${category.images[0].file}`"
+          :src="`/img/photography/${category.name}/${category.images[0].file}-2560.jpg`"
           loading="lazy"
           alt="placeholder"
         />
@@ -20,6 +20,9 @@
 
 export default {
   name: 'CategoriesComponent',
-  props: ['data']
+  props: ['data'],
+  mounted () {
+    console.log(this.data)
+  }
 }
 </script>
