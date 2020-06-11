@@ -35,7 +35,7 @@ export default {
     setTimeout(() => {
       // Emitted to App.vue
       EventBus.$emit('transitionsActive', false)
-    }, 50)
+    }, 0)
 
     setTimeout(() => {
       next()

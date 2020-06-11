@@ -11,7 +11,7 @@
 }
 
 .banner__img {
-  @include transition(opacity, 0.5s, $ease-out-cubic, 0.25s);
+  @include transition(opacity, 0.5s, $ease-in-cubic, 0.25s);
   opacity: 1;
   // filter: grayscale() ;
   // filter: blur(1px);
