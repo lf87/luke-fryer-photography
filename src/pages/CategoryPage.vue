@@ -26,13 +26,15 @@
         </button>
       </div>
     </section>
-    <GalleryComponent
-      :category="category"
-      :categories="categories"
-      :data="data"
-      :galleryActive="galleryActive"
-      :selectedImgIndex="selectedImgIndex"
-    ></GalleryComponent>
+    <keep-alive>
+      <GalleryComponent
+        :category="category"
+        :categories="categories"
+        :data="data"
+        :galleryActive="galleryActive"
+        :selectedImgIndex="selectedImgIndex"
+      ></GalleryComponent>
+    </keep-alive>
   </main>
 </template>
 
@@ -70,7 +72,7 @@ export default {
   },
   methods: {
     activateGallery (state, index) {
-      console.log(index)
+      this.$router.push({ query: { gallery: 'active' } })
       this.selectedImgIndex = index
       !state ? this.galleryActive = true : this.galleryActive = false
     }
@@ -79,6 +81,10 @@ export default {
     getActiveCategoryIndex () {
       return this.categories.indexOf(this.category)
     }
+  },
+  beforeRouteUpdate (to, from, next) {
+    if (this.galleryActive) this.galleryActive = false
+    next()
   }
 }
 </script>

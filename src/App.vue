@@ -48,7 +48,6 @@ export default {
             // eslint-disable-next-line no-console
             .catch(err => { console.error(`'${err}' happened!`); return {} }))
         .then((json) => {
-          console.log(json)
           this.data.push(json)
 
           loopIndex++

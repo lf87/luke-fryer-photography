@@ -25,9 +25,6 @@
 
 export default {
   name: 'CategoriesComponent',
-  props: ['data'],
-  mounted () {
-    console.log(this.data)
-  }
+  props: ['data']
 }
 </script>

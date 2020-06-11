@@ -3,7 +3,7 @@
     <img
       class="gallery__img"
       sizes="(max-width: 2560px) 100vw, 2560px"
-          :srcset="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-2560.jpg 2560w,
+      :srcset="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-2560.jpg 2560w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1920.jpg 1920w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1440.jpg 1440w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1080.jpg 1080w`"
@@ -15,7 +15,7 @@
       v-if="currentImageIndex !== 0"
       class="gallery__img--hide"
       sizes="(max-width: 2560px) 100vw, 2560px"
-          :srcset="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-2560.jpg 2560w,
+      :srcset="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-2560.jpg 2560w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1920.jpg 1920w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1440.jpg 1440w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1080.jpg 1080w`"
@@ -27,7 +27,7 @@
       v-if="currentImageIndex !== getCategoryImagesLength"
       class="gallery__img--hide"
       sizes="(max-width: 2560px) 100vw, 2560px"
-          :srcset="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-2560.jpg 2560w,
+      :srcset="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-2560.jpg 2560w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1920.jpg 1920w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1440.jpg 1440w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1080.jpg 1080w`"
@@ -79,6 +79,7 @@ export default {
     closeGallery () {
       // Emmitted to CategoryPage.vue
       EventBus.$emit('closeGallery')
+      this.$router.replace({ query: {} })
     }
   },
   computed: {
@@ -86,10 +87,7 @@ export default {
       return this.categories.indexOf(this.category)
     },
     getCategoryImagesLength () {
-      // console.log(this.data)
-      // console.log(this.categories)
       const category = this.categories.indexOf(this.category)
-      console.log(this.data[category].images.length)
       return this.data[category].images.length - 1
     }
   },

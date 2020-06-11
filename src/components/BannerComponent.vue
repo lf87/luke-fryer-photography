@@ -92,15 +92,8 @@ export default {
       return this.categories.indexOf(this.selectCategory)
     },
     currentRouteName () {
-      console.log(this.$route.name)
       return this.$route.name
     }
   }
-  // watch: {
-  //   dataFetched: function (value) {
-  //     console.log('hhhhhhhhhh')
-  //     // EventBus.$emit('transitionsActive', true)
-  //   }
-  // }
 }
 </script>
