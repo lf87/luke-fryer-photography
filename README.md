@@ -35,4 +35,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # Issues
 * home page banner doesnt load until refresh/cached
-* padding needs removing on cat page
+* padding needs removing on cat page 
