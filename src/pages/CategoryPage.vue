@@ -83,7 +83,17 @@ export default {
     }
   },
   beforeRouteUpdate (to, from, next) {
-    if (this.galleryActive) this.galleryActive = false
+    // console.log(to)
+    console.log('active')
+    if (this.galleryActive) {
+      // this.$router.go(-1)
+      this.galleryActive = false
+      // return
+    }
+    // else if (!from.query.gallery === 'active') {
+    //   console.log('sdfusbfiudbdgiu')
+    //   this.$router.push({ name: 'HomePage' })
+    // }
     next()
   }
 }

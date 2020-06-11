@@ -1,6 +1,6 @@
 <template>
   <div v-if="dataFetched" class="home">
-    <BannerComponent :data="data" :categories="categories"></BannerComponent>
+    <BannerComponent :data="data" :dataFetched="dataFetched" :categories="categories"></BannerComponent>
     <CategoriesComponent :data="data"  ref="categories"></CategoriesComponent>
   </div>
 </template>
@@ -22,11 +22,12 @@ export default {
     const updateSelectedCategory = () => {
       EventBus.$emit('categorySelected', to.params.category)
     }
+    console.log('llllllllllll')
 
     // Emitted to BannerComponent.vue
     scroll(
       0,
-      500,
+      300,
       'easeOutQuad',
       updateSelectedCategory
     )
@@ -38,7 +39,7 @@ export default {
 
     setTimeout(() => {
       next()
-    }, 1250)
+    }, 1000)
   }
 }
 </script>

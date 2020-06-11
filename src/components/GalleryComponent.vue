@@ -79,7 +79,8 @@ export default {
     closeGallery () {
       // Emmitted to CategoryPage.vue
       EventBus.$emit('closeGallery')
-      this.$router.replace({ query: {} })
+      this.$router.go(-1)
+      // this.$router.replace({ query: {} })
     }
   },
   computed: {
