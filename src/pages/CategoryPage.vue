@@ -1,20 +1,20 @@
 <template>
-  <main v-if="dataFetched" class="category">
+  <main v-if="dataFetched" class="category grid">
     <BannerComponent
       :data="data"
       :category="category"
       :categories="categories"
       :dataFetched="dataFetched"
     ></BannerComponent>
-    <section class="category__grid">
-      <div
-        class="category__grid-item"
-        v-for="(image, index) in data[getActiveCategoryIndex].images"
-        :key="index"
-      >
-        <button class="category__grid-img-btn" v-on:click="activateGallery(galleryActive, index)">
+    <section class="grid">
+      <template v-for="(image, index) in data[getActiveCategoryIndex].images">
+        <button
+          :class="[`grid__item grid__item--to-gallery grid__item--${image.layout}`]"
+          v-on:click="activateGallery(galleryActive, index)"
+          :key="index"
+        >
           <img
-            class="category__grid-img"
+            class="grid__img"
             sizes="(max-width: 2560px) 100vw, 2560px"
             :srcset="`/img/photography/${category}/${image.file}-2560.jpg 2560w,
         /img/photography/${category}/${image.file}-1920.jpg 1920w,
@@ -24,7 +24,7 @@
             alt="alt"
           />
         </button>
-      </div>
+      </template>
     </section>
     <keep-alive>
       <GalleryComponent

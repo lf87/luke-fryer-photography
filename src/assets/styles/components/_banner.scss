@@ -59,7 +59,7 @@
   text-shadow: $text-shadow;
 
   .transitions-active & {
-    transition-timing-function: $ease-out-quint;
+    transition-timing-function: $ease-out-cubic;
     transform: translate3d(0, 0, 0);
     opacity: 1;
   }
@@ -76,7 +76,7 @@
   text-shadow: $text-shadow;
 
   .transitions-active & {
-    transition-timing-function: $ease-out-quint;
+    transition-timing-function: $ease-out-cubic;
     transform: translate3d(0, 0, 0);
     opacity: 1;
   }

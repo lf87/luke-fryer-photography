@@ -6,30 +6,3 @@
   @include large-heading;
   transform: translate3d(0, 0.25rem, 0);
 }
-
-.category__grid {
-  @include image-grid;
-}
-
-.category__grid-item {
-  @include image-grid-item;
-}
-
-.category__grid-img-btn {
-  @include full-flex;
-  cursor: pointer;
-
-  &:hover,
-  &:active {
-    .category__grid-img {
-      transform: scale3d(1.025, 1.025, 1.025);
-    }
-  }
-}
-
-.category__grid-img {
-  @include transition(transform, 0.75s, $ease-out-quart);
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}

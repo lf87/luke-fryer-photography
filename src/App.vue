@@ -16,23 +16,25 @@ export default {
   name: 'App',
   data: () => ({
     transitionsActive: false,
-    categories: ['amsterdam',
+    categories: [
       'astrophotography',
-      'austria',
-      'carpathians',
-      'crete',
-      'croatia',
-      'devon',
       'fireworks',
       'formula-1',
-      'fuerteventura',
-      'gdansk',
-      'lviv',
       'macro',
+      'austria',
+      'amsterdam',
+      'lviv',
+      'devon',
+      'crete',
+      'gdansk',
+      'croatia',
+      'carpathians',
+      'fuerteventura',
       'nature',
       'scafell-pike',
       'scarborough',
-      'scotland'],
+      'scotland'
+    ],
     data: [],
     dataFetched: false
   }),
@@ -42,6 +44,7 @@ export default {
     const categoriesLength = this.categories.length
 
     for (const value of iterator) {
+      console.log(value)
       fetch(`/data/categories/${value}.json`)
         .then((response) =>
           response.json()
