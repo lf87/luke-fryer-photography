@@ -4,6 +4,13 @@
   "smallHeading": "",
   "images": [
     {
+      "file": "austria-03",
+      "title": "austria-03",
+      "alt": "Photo shot from inside a car, capturing the mountains in the background, and the motion blur of industry in the foreground",
+      "desc": "austria-03 photo",
+      "layout": "portrait"
+    },
+    {
       "file": "austria-01",
       "title": "austria-01",
       "alt": "austria-01",
@@ -16,13 +23,6 @@
       "alt": "austria-02",
       "desc": "austria-02 photo",
       "layout": "portrait"
-    },
-    {
-      "file": "austria-03",
-      "title": "austria-03",
-      "alt": "Photo shot from inside a car, capturing the mountains in the background, and the motion blur of industry in the foreground",
-      "desc": "austria-03 photo",
-      "layout": "landscape"
     },
     {
       "file": "austria-04",
@@ -130,13 +130,6 @@
       "layout": "square"
     },
     {
-      "file": "austria-20",
-      "title": "austria-01",
-      "alt": "austria-01",
-      "desc": "austria-01 photo",
-      "layout": "landscape"
-    },
-    {
       "file": "austria-21",
       "title": "austria-01",
       "alt": "austria-01",
@@ -145,6 +138,13 @@
     },
     {
       "file": "austria-22",
+      "title": "austria-01",
+      "alt": "austria-01",
+      "desc": "austria-01 photo",
+      "layout": "landscape"
+    },
+    {
+      "file": "austria-20",
       "title": "austria-01",
       "alt": "austria-01",
       "desc": "austria-01 photo",

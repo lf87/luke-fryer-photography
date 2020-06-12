@@ -17,23 +17,24 @@ export default {
   data: () => ({
     transitionsActive: false,
     categories: [
-      'astrophotography',
-      'fireworks',
-      'formula-1',
-      'macro',
-      'austria',
-      'amsterdam',
-      'lviv',
-      'devon',
       'crete',
-      'gdansk',
+      'scotland',
+      'devon',
       'croatia',
-      'carpathians',
       'fuerteventura',
-      'nature',
+      'lviv',
       'scafell-pike',
+      'austria',
+      'gdansk',
+      'bulgaria',
+      'carpathians',
+      'amsterdam',
+      'formula-1',
       'scarborough',
-      'scotland'
+      'nature',
+      'fireworks',
+      'macro',
+      'astrophotography'
     ],
     data: [],
     dataFetched: false
@@ -75,7 +76,3 @@ export default {
   }
 }
 </script>
-
-<style lanf="scss">
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
-</style>

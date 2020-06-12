@@ -1,5 +1,5 @@
 <template>
-  <main v-if="dataFetched" class="category grid">
+  <main v-if="dataFetched" class="category">
     <BannerComponent
       :data="data"
       :category="category"
@@ -9,7 +9,7 @@
     <section class="grid">
       <template v-for="(image, index) in data[getActiveCategoryIndex].images">
         <button
-          :class="[`grid__item grid__item--to-gallery grid__item--${image.layout}`]"
+          :class="[`grid__item grid__item--${image.layout}`]"
           v-on:click="activateGallery(galleryActive, index)"
           :key="index"
         >

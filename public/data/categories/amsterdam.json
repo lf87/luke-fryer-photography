@@ -4,6 +4,13 @@
   "smallHeading": "",
   "images": [
     {
+      "file": "amsterdam-03",
+      "title": "amsterdam-03",
+      "alt": "amsterdam-03",
+      "desc": "amsterdam-03 photo",
+      "layout": "portrait"
+    },
+    {
       "file": "amsterdam-01",
       "title": "amsterdam-01",
       "alt": "amsterdam-01",
@@ -15,13 +22,6 @@
       "title": "amsterdam-02",
       "alt": "amsterdam-02",
       "desc": "amsterdam-02 photo",
-      "layout": "landscape"
-    },
-    {
-      "file": "amsterdam-03",
-      "title": "amsterdam-03",
-      "alt": "amsterdam-03",
-      "desc": "amsterdam-03 photo",
       "layout": "landscape"
     },
     {

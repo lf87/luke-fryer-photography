@@ -4,6 +4,13 @@
   "smallHeading": "",
   "images": [
     {
+      "file": "crete-07",
+      "title": "crete-07",
+      "alt": "crete-07",
+      "desc": "crete-07 photo",
+      "layout": "portrait"
+    },
+    {
       "file": "crete-01",
       "title": "crete-01",
       "alt": "crete-01",
@@ -44,13 +51,6 @@
       "alt": "crete-06",
       "desc": "crete-06 photo",
       "layout": "landscape"
-    },
-    {
-      "file": "crete-07",
-      "title": "crete-07",
-      "alt": "crete-07",
-      "desc": "crete-07 photo",
-      "layout": "portrait"
     },
     {
       "file": "crete-08",

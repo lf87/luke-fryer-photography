@@ -4,6 +4,13 @@
   "smallHeading": "",
   "images": [
     {
+      "file": "astrophotography-03",
+      "title": "astrophotography-03",
+      "alt": "astrophotography-03",
+      "desc": "astrophotography-03 photo",
+      "layout": "landscape"
+    },
+    {
       "file": "astrophotography-01",
       "title": "astrophotography-01",
       "alt": "astrophotography-01",
@@ -22,13 +29,6 @@
       "title": "astrophotography-02",
       "alt": "astrophotography-02",
       "desc": "astrophotography-02 photo",
-      "layout": "landscape"
-    },
-    {
-      "file": "astrophotography-03",
-      "title": "astrophotography-03",
-      "alt": "astrophotography-03",
-      "desc": "astrophotography-03 photo",
       "layout": "landscape"
     },
     {

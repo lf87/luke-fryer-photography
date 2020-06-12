@@ -13,8 +13,8 @@
           loading="lazy"
           alt="placeholder"
         />
-        <div class="categories__heading">
-          <span class="categories__text">{{category.name}}</span>
+        <div class="grid__heading">
+          <span class="grid__text">{{category.largeHeading}}</span>
         </div>
       </router-link>
     </template>

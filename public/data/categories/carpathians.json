@@ -3,6 +3,20 @@
   "largeHeading": "Carpathians",
   "smallHeading": "The Carpathians mountains, Ukraine",
   "images": [
+        {
+          "file": "carpathians-03",
+          "title": "carpathians-03",
+          "alt": "carpathians-03",
+          "desc": "carpathians-03 photo",
+          "layout": "landscape"
+        },
+    {
+      "file": "carpathians-08",
+      "title": "carpathians-08",
+      "alt": "carpathians-08",
+      "desc": "carpathians-08 photo",
+      "layout": "panoramic"
+    },
     {
       "file": "carpathians-01",
       "title": "carpathians-01",
@@ -15,13 +29,6 @@
       "title": "carpathians-02",
       "alt": "carpathians-02",
       "desc": "carpathians-02 photo",
-      "layout": "landscape"
-    },
-    {
-      "file": "carpathians-03",
-      "title": "carpathians-03",
-      "alt": "carpathians-03",
-      "desc": "carpathians-03 photo",
       "layout": "landscape"
     },
     {
@@ -51,13 +58,6 @@
       "alt": "carpathians-07",
       "desc": "carpathians-07 photo",
       "layout": "landscape"
-    },
-    {
-      "file": "carpathians-08",
-      "title": "carpathians-08",
-      "alt": "carpathians-08",
-      "desc": "carpathians-08 photo",
-      "layout": "panoramic"
     },
     {
       "file": "carpathians-09",

@@ -15,7 +15,7 @@
   opacity: 1;
   // filter: grayscale() ;
   // filter: blur(1px);
-  filter: sepia(10%) brightness(0.75) grayscale(0.33);
+  filter: $image-filter;
   // @include transition(transform, 2.4s, $ease-out-quad);
   width: calc(100% + 4rem);
   position: absolute;

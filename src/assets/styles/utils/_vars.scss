@@ -47,14 +47,16 @@ $ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
 // Z-index
 $z-gallery: 1;
+$z-grid__text: 1;
 $z-gallery__btn: 2;
 $z-gallery__btn-close: 2;
 
 // Misc
-$f-primary: "FreightBigProMedium";
-$f-handwriting: "FreightBigProMedium";
+$f-primary: 'latoregular', sans-serif;
+$f-handwriting: 'FreightBigProMedium', serif;
 $gutter: 1rem;
 $vspace: 2rem;
 $text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 $transition-timing: 0.25s;
 $app-max-width: 2560px;
+$image-filter: sepia(10%) brightness(0.75) grayscale(0.65);

@@ -26,6 +26,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # To do
 
+* Add link to twitter bio
 * close prev next btns styling for gallery
 * down arrow on the banner (may as well use plugin to make it scroll)
 * favicons etc.

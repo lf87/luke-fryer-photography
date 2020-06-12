@@ -4,7 +4,7 @@
   "smallHeading": "",
   "images": [
     {
-      "file": "croatia-01",
+      "file": "croatia-03",
       "title": "croatia-01",
       "alt": "croatia-01",
       "desc": "croatia-01 photo",
@@ -78,27 +78,6 @@
       "title": "croatia-11",
       "alt": "croatia-11",
       "desc": "croatia-11 photo",
-      "layout": "landscape"
-    },
-    {
-      "file": "croatia-12",
-      "title": "croatia-01",
-      "alt": "croatia-01",
-      "desc": "croatia-01 photo",
-      "layout": "landscape"
-    },
-    {
-      "file": "croatia-13",
-      "title": "croatia-01",
-      "alt": "croatia-01",
-      "desc": "croatia-01 photo",
-      "layout": "landscape"
-    },
-    {
-      "file": "croatia-14",
-      "title": "croatia-01",
-      "alt": "croatia-01",
-      "desc": "croatia-01 photo",
       "layout": "landscape"
     }
   ]

@@ -149,10 +149,13 @@ button {
   border-radius: 0;
   border: 0;
   padding: 0;
+  -webkit-appearance: none;
+  box-shadow: none;
+  outline: none;
 }
 
 input {
   -webkit-appearance: none;
-  border-radius: 0;
   box-shadow: none;
+  border-radius: 0;
 }
