@@ -26,6 +26,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # To do
 
+
+* back home btn
 * Add link to twitter bio
 * close prev next btns styling for gallery
 * down arrow on the banner (may as well use plugin to make it scroll)
@@ -35,5 +37,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 # Issues
-* home page banner doesnt load until refresh/cached
-* padding needs removing on cat page 
+* home page banner doesn't always load until refresh/cached

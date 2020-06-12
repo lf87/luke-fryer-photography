@@ -61,15 +61,13 @@ export default {
   //     })
   // },
   mounted () {
-    if (this.dataFetched) {
-      this.largeText = 'Luke Fryer'
-      this.smallText = 'Photographer'
-      window.addEventListener('load', () => {
-        this.$nextTick(() => {
-          EventBus.$emit('transitionsActive', true)
-        })
-      })
-    }
+    this.largeText = 'Luke Fryer'
+    this.smallText = 'Photographer'
+    this.$nextTick(() => {
+      setTimeout(() => {
+        EventBus.$emit('transitionsActive', true)
+      }, 100)
+    })
     if (!this.category) {
       // If home page
       // EventBus.$emit('transitionsActive', true)
