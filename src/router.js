@@ -27,18 +27,12 @@ const router = new Router({
 
 router.afterEach((to, from) => {
   // Emitted to App.vue
-  if (to.name === 'HomePage') {
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        EventBus.$emit('transitionsActive', true)
-      }, 50)
-    })
+  if (from.name === 'CategoryPage') {
+    EventBus.$emit('transitionsActive', true)
   }
 
   if (to.name === 'CategoryPage') {
-    setTimeout(() => {
-      EventBus.$emit('transitionsActive', true)
-    }, 50)
+    // EventBus.$emit('transitionsActive', true)
   }
 })
 

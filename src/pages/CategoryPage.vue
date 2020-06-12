@@ -84,17 +84,9 @@ export default {
     }
   },
   beforeRouteUpdate (to, from, next) {
-    // console.log(to)
-    console.log('active')
     if (this.galleryActive) {
-      // this.$router.go(-1)
       this.galleryActive = false
-      // return
     }
-    // else if (!from.query.gallery === 'active') {
-    //   console.log('sdfusbfiudbdgiu')
-    //   this.$router.push({ name: 'HomePage' })
-    // }
     next()
   }
 }

@@ -22,13 +22,12 @@ export default {
     const updateSelectedCategory = () => {
       EventBus.$emit('categorySelected', to.params.category)
     }
-    console.log('llllllllllll')
 
     // Emitted to BannerComponent.vue
     scroll(
       0,
-      300,
-      'easeOutQuad',
+      600,
+      'easeOutCubic',
       updateSelectedCategory
     )
 

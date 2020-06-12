@@ -45,7 +45,6 @@ export default {
     const categoriesLength = this.categories.length
 
     for (const value of iterator) {
-      console.log(value)
       fetch(`/data/categories/${value}.json`)
         .then((response) =>
           response.json()
@@ -57,8 +56,6 @@ export default {
           loopIndex++
           if (loopIndex === categoriesLength) {
             // Signal data fetched upon completion
-            console.log(loopIndex)
-            console.log(categoriesLength)
             this.dataFetched = true
           }
         })

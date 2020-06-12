@@ -16,7 +16,6 @@
   @include transition(opacity transform, 3s, $ease-out-quint);
   transform: translate3d(0, 0.25rem, 0);
   opacity: 0;
-  font-weight: 300;
   font-family: $f-handwriting;
   text-shadow: $text-shadow;
   text-align: center;

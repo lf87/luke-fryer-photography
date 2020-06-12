@@ -31,8 +31,8 @@
       :alt="data[getActiveCategoryIndex].images[0].alt"
     />
     <h1 v-if="currentRouteName === 'HomePage'" class="banner__heading">
-      <span class="banner__large-text">Luke Fryer</span>
-      <span class="banner__small-text">Photographer</span>
+      <span class="banner__large-text">{{ largeText}}</span>
+      <span class="banner__small-text">{{ smallText}}</span>
     </h1>
     <h1 v-else class="banner__heading">
       <span class="banner__large-text">{{ data[getActiveCategoryIndex].largeHeading }}</span>
@@ -52,17 +52,34 @@ export default {
       selectCategory: '',
       activeCategory: 'austria',
       // getActiveCategoryIndex: '0',
-      ready: false
+      largeText: '',
+      smallText: ''
     }
   },
+  // updated: function () {
+  //   this.$nextTick(() => {
+  //     })
+  // },
   mounted () {
-    if (this.dataFetched) this.ready = true
+    if (this.dataFetched) {
+      this.largeText = 'Luke Fryer'
+      this.smallText = 'Photographer'
+      window.addEventListener('load', () => {
+        this.$nextTick(() => {
+          EventBus.$emit('transitionsActive', true)
+        })
+      })
+    }
     if (!this.category) {
       // If home page
-      // this.category = this.activeCategory
+      // EventBus.$emit('transitionsActive', true)
     } else {
       // If category page
       this.activeCategory = this.category
+
+      this.$nextTick(() => {
+        EventBus.$emit('transitionsActive', true)
+      })
     }
 
     // Emitted from HomePage.vue
@@ -80,27 +97,14 @@ export default {
   },
   computed: {
     getActiveCategoryIndex () {
-      console.log(this.categories)
-      console.log(this.dataFetched)
-      console.log(this.categories.indexOf(this.activeCategory))
       return this.categories.indexOf(this.activeCategory)
     },
     getSelectCategoryIndex () {
-      console.log(this.categories)
-      console.log(this.selectCategory)
-      console.log(this.categories.indexOf(this.selectCategory))
       return this.categories.indexOf(this.selectCategory)
     },
     currentRouteName () {
       return this.$route.name
     }
   }
-  // watch: {
-  //   ready: function (val, change) { // watch it
-  //     console.log(val)
-  //     console.log(change)
-  //     this.getActiveCategoryIndex = this.categories.indexOf(this.activeCategory)
-  //   }
-  // }
 }
 </script>
