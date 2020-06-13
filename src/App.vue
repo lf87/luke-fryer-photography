@@ -65,8 +65,6 @@ export default {
       }
 
       await Promise.all(promises).then(data => {
-        console.log('666')
-        console.log(data)
         this.data = data
         this.dataFetched = true
       })

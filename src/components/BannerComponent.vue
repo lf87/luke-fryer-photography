@@ -82,12 +82,10 @@ export default {
       // If home page
       // Fade in main image on top of blurry image
       this.$refs.imagePrimary.onload = () => {
-        console.log('999')
         this.primaryImageLoaded = true
       }
     } else {
       // If category page
-      console.log('ggg')
       this.activeCategory = this.category
 
       this.$nextTick(() => {
