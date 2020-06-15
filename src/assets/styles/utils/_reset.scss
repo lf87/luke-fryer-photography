@@ -145,6 +145,7 @@ img {
 }
 
 button {
+  @include remove-tap-highlight;
   background-color: transparent;
   border-radius: 0;
   border: 0;
