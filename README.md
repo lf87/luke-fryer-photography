@@ -26,7 +26,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # To do
 
-
 * back home btn
 * Add link to twitter bio
 * close prev next btns styling for gallery
@@ -37,4 +36,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 # Issues
-* home page banner doesn't always load until refresh/cached
+* firefox mobile - massive lag after clicking router link
