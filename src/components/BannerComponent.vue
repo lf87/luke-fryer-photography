@@ -1,5 +1,23 @@
 <template>
   <header v-if="dataFetched" class="banner">
+    <a
+      v-if="currentRouteName === 'HomePage'"
+      :class="['banner__social-icon', { 'active': socialIconActive }]"
+      href="https://twitter.com/LukeFryer"
+      target="tiwtterProfile"
+      rel="noopener noreferrer"
+    >
+      <svg
+        class="banner__social-icon-svg"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 416"
+      >
+        <path
+          fill="#03a9f4"
+          d="M512 49c-19 9-39 14-60 17 21-13 38-34 46-58-21 12-43 20-67 25a105 105 0 00-179 96C165 125 88 83 36 19a106 106 0 0032 140c-17 0-34-5-48-12v1c0 51 37 93 85 103a105 105 0 01-48 1c14 42 52 73 98 74A211 211 0 010 369c47 30 102 47 161 47a297 297 0 00298-312c21-15 39-33 53-55z"
+        />
+      </svg>
+    </a>
     <img
       v-if="currentRouteName === 'HomePage'"
       :class="['banner__img', { 'banner__img--fade-out': selectCategory, 'banner__img--blurry-hide': primaryImageLoaded }]"
@@ -58,6 +76,8 @@ export default {
     return {
       selectCategory: '',
       activeCategory: 'austria',
+      socialIconActive: true,
+      isScrolling: false,
       // getActiveCategoryIndex: '0',
       largeText: '',
       smallText: '',
@@ -100,11 +120,30 @@ export default {
       this.transitionsActive = false
     })
 
+    // Emitted from BannerComponent.vue
+    EventBus.$on('hideSocialIcon', () => {
+      this.socialIconActive = false
+      this.isScrolling = true
+    })
+
     // Emitted from CategoryPage.vue
     EventBus.$on('categoryActive', (category) => {
       this.selectCategory = category
       this.transitionsActive = false
     })
+
+    // Remove social icon upon scroll greater than 0 from top
+    const stickyObserver = new IntersectionObserver(this.sticky)
+    stickyObserver.observe(document.querySelector('.grid__item'))
+  },
+  methods: {
+    sticky (entry) {
+      if (entry[0].isIntersecting) {
+        this.socialIconActive = false
+      } else if (!this.isScrolling) {
+        this.socialIconActive = true
+      }
+    }
   },
   computed: {
     getActiveCategoryIndex () {

@@ -1,7 +1,13 @@
 <template>
   <section class="categories grid">
     <template v-for="category in data">
-      <router-link :class="[`grid__item grid__item--${category.images[0].layout}`]" tag="button" :to="category.name" :key="category.index">
+      <router-link
+        :class="[`grid__item grid__item--${category.images[0].layout}`]"
+        tag="button"
+        :to="category.name"
+        :key="category.index"
+        v-on:click.native="hideSocialIcon()"
+      >
         <img
           class="grid__img"
           sizes="(max-width: 2560px) 100vw, 2560px"
@@ -22,9 +28,17 @@
 </template>
 
 <script>
+import EventBus from '@/event-bus/event-bus.js'
 
 export default {
   name: 'CategoriesComponent',
-  props: ['data']
+  props: ['data'],
+  methods: {
+    hideSocialIcon () {
+      console.log('inininin')
+      // Emitted to BannerComponent.vue
+      EventBus.$emit('hideSocialIcon')
+    }
+  }
 }
 </script>

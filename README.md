@@ -34,6 +34,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 * clean up junk files/code/lint
 * test test test!
 
-
 # Issues
 * firefox mobile - massive lag after clicking router link

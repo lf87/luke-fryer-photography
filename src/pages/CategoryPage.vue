@@ -59,6 +59,7 @@ export default {
   },
   mounted () {
     this.activeCategoryIndex = this.categories.indexOf(this.category)
+    // Emitted to BannerComponent.vue
     EventBus.$emit('categorySelected', this.category)
 
     // Emmitted from GalleryComponent.vue

@@ -20,6 +20,7 @@ export default {
   },
   beforeRouteLeave (to, from, next) {
     const updateSelectedCategory = () => {
+      console.log('aaa')
       EventBus.$emit('categorySelected', to.params.category)
     }
 
