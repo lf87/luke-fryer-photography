@@ -77,6 +77,8 @@ export default {
       this.$router.push({ query: { gallery: 'active' } })
       this.selectedImgIndex = index
       !state ? this.galleryActive = true : this.galleryActive = false
+      // Emitted to GalleryComponent.vue
+      EventBus.$emit('focusGallery')
     }
   },
   computed: {
@@ -89,6 +91,13 @@ export default {
       this.galleryActive = false
     }
     next()
+  },
+  beforeRouteEnter (to, from, next) {
+    if (to.query.gallery === 'active') {
+      next({ path: to.path })
+    } else {
+      next()
+    }
   }
 }
 </script>

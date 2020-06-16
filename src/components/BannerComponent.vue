@@ -1,8 +1,19 @@
 <template>
   <header v-if="dataFetched" class="banner">
+    <router-link
+      v-if="currentRouteName !== 'HomePage'"
+      :class="['banner__back', { 'active': bannerIconsActive }]"
+      :to="{ name: 'HomePage' }"
+    >
+      <svg class="banner__back__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 408.65">
+        <path
+          d="M464.34 165.74l.77.17H135.89l103.5-103.72c5.07-5.06 7.85-11.92 7.85-19.12 0-7.2-2.78-14.01-7.85-19.09l-16.1-16.11C218.22 2.8 211.47 0 204.27 0c-7.2 0-13.95 2.78-19.02 7.84L7.84 185.24C2.76 190.32-.02 197.1 0 204.3c-.02 7.24 2.76 14.02 7.84 19.1l177.41 177.41c5.06 5.06 11.81 7.84 19.02 7.84 7.2 0 13.94-2.79 19.01-7.84l16.1-16.11c5.07-5.06 7.85-11.81 7.85-19.01 0-7.2-2.78-13.59-7.85-18.65l-104.66-104.3h329.99c14.83 0 27.29-12.78 27.29-27.6v-22.79c0-14.83-12.83-26.61-27.66-26.61z"
+        />
+      </svg>
+    </router-link>
     <a
       v-if="currentRouteName === 'HomePage'"
-      :class="['banner__social-icon', { 'active': socialIconActive }]"
+      :class="['banner__social-icon', { 'active': bannerIconsActive }]"
       href="https://twitter.com/LukeFryer"
       target="twitter"
       rel="noopener noreferrer"
@@ -27,7 +38,7 @@
     <img
       v-if="selectCategory"
       class="banner__img"
-      sizes="(max-width: 2560px) 100vw, 2560px"
+      sizes="(min-width: 768px) and (min-height: 700px) 1920px, (min-width: 1440px) and (min-height: 700px) 2560px"
       :srcset="`/img/photography/${selectCategory}/${data[getSelectCategoryIndex].images[0].file}-2560.jpg 2560w,
         /img/photography/${selectCategory}/${data[getSelectCategoryIndex].images[0].file}-1920.jpg 1920w,
         /img/photography/${selectCategory}/${data[getSelectCategoryIndex].images[0].file}-1440.jpg 1440w,
@@ -38,7 +49,7 @@
     <img
       v-if="currentRouteName === 'HomePage'"
       :class="['banner__img banner__img--primary', { 'banner__img--fade-out': selectCategory, 'banner__img--primary-fade-in': primaryImageLoaded }]"
-      sizes="(max-width: 2560px) 100vw, 2560px"
+      sizes="(min-width: 768px) and (min-height: 700px) 1920px, (min-width: 1440px) and (min-height: 700px) 2560px"
       srcset="/img/photography/austria/austria-03-2560.jpg 2560w, /img/photography/austria/austria-03-1920.jpg 1920w, /img/photography/austria/austria-03-1440.jpg 1440w, /img/photography/austria/austria-03-1080.jpg 1080w"
       src="/img/photography/austria/austria-03-1920.jpg"
       alt="Austria"
@@ -47,7 +58,7 @@
     <img
       v-else
       :class="['banner__img', { 'banner__img--fade-out': selectCategory }]"
-      sizes="(max-width: 2560px) 100vw, 2560px"
+      sizes="(min-width: 768px) and (min-height: 700px) 1920px, (min-width: 1440px) and (min-height: 700px) 2560px"
       :srcset="`/img/photography/${activeCategory}/${data[getActiveCategoryIndex].images[0].file}-2560.jpg 2560w,
         /img/photography/${activeCategory}/${data[getActiveCategoryIndex].images[0].file}-1920.jpg 1920w,
         /img/photography/${activeCategory}/${data[getActiveCategoryIndex].images[0].file}-1440.jpg 1440w,
@@ -76,7 +87,7 @@ export default {
     return {
       selectCategory: '',
       activeCategory: 'austria',
-      socialIconActive: true,
+      bannerIconsActive: true,
       isScrolling: false,
       // getActiveCategoryIndex: '0',
       largeText: '',
@@ -121,8 +132,8 @@ export default {
     })
 
     // Emitted from BannerComponent.vue
-    EventBus.$on('hideSocialIcon', () => {
-      this.socialIconActive = false
+    EventBus.$on('hideBannerIcons', () => {
+      this.bannerIconsActive = false
       this.isScrolling = true
     })
 
@@ -139,9 +150,9 @@ export default {
   methods: {
     sticky (entry) {
       if (entry[0].isIntersecting) {
-        this.socialIconActive = false
+        this.bannerIconsActive = false
       } else if (!this.isScrolling) {
-        this.socialIconActive = true
+        this.bannerIconsActive = true
       }
     }
   },

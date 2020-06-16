@@ -56,6 +56,8 @@
   opacity: 0;
   font-family: $f-handwriting;
   text-shadow: $text-shadow;
+  text-align: center;
+  font-size: 10vmin;
 
   .transitions-active & {
     transition-timing-function: $ease-out-cubic;
@@ -83,7 +85,7 @@
 
 .banner__social-icon {
   @include transition(background-color opacity, 0.15s, ease-in-out);
-  z-index: 10;
+  z-index: $z-banner__social-icon;
   width: calc(30px + 0.75rem);
   height: calc(30px + 0.75rem);
   position: absolute;
@@ -97,10 +99,6 @@
   border-bottom-right-radius: 30px;
   opacity: 0;
 
-  &.active {
-    opacity: 1;
-  }
-
   &:hover {
     background-color: rgba($c-white, 0.45);
 
@@ -111,10 +109,54 @@
   }
 }
 
+.banner__social-icon.active {
+  .transitions-active & {
+    opacity: 1;
+  }
+}
+
 .banner__social-icon-svg {
   display: block;
   width: 30px;
   height: 25px;
   transform: rotate(5deg);
   opacity: 0.7;
+}
+
+.banner__back {
+  @include transition(opacity, 0.5s, ease-in-out, 0.5s);
+  @include blurry-bg($c-white, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  z-index: $z-banner__back;
+  opacity: 0;
+  display: none;
+
+  @include bp(sm) {
+    display: flex;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.banner__back.active {
+  .transitions-active & {
+    opacity: 0.75;
+  }
+}
+
+.banner__back__svg {
+  fill: $c-white;
+  width: 15px;
+  height: 100%;
 }

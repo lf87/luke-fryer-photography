@@ -26,10 +26,10 @@
   }
 }
 
-@mixin blurry-bg() {
+@mixin blurry-bg($colour: $c-mine-shaft, $opacity: 0.3) {
   &::before {
     content: "";
-    background-color: rgba($c-mine-shaft, 0.3);
+    background-color: rgba($colour, $opacity);
     position: absolute;
     bottom: 0;
     left: 0;

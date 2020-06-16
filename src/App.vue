@@ -25,7 +25,7 @@ export default {
       'lviv',
       'scafell-pike',
       'austria',
-      'gdansk',
+      'poland',
       'bulgaria',
       'carpathians',
       'amsterdam',

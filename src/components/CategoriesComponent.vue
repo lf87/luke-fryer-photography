@@ -6,7 +6,7 @@
         tag="button"
         :to="category.name"
         :key="category.index"
-        v-on:click.native="hideSocialIcon()"
+        v-on:click.native="hideBannerIcons()"
       >
         <img
           class="grid__img"
@@ -34,10 +34,9 @@ export default {
   name: 'CategoriesComponent',
   props: ['data'],
   methods: {
-    hideSocialIcon () {
-      console.log('inininin')
+    hideBannerIcons () {
       // Emitted to BannerComponent.vue
-      EventBus.$emit('hideSocialIcon')
+      EventBus.$emit('hideBannerIcons')
     }
   }
 }
