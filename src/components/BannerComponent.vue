@@ -4,7 +4,7 @@
       v-if="currentRouteName === 'HomePage'"
       :class="['banner__social-icon', { 'active': socialIconActive }]"
       href="https://twitter.com/LukeFryer"
-      target="tiwtterProfile"
+      target="twitter"
       rel="noopener noreferrer"
     >
       <svg
