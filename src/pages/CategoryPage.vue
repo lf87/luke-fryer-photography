@@ -34,6 +34,7 @@
         :data="data"
         :galleryActive="galleryActive"
         :selectedImgIndex="selectedImgIndex"
+        ref="gallery"
       ></GalleryComponent>
     </keep-alive>
   </main>
@@ -77,8 +78,7 @@ export default {
       this.$router.push({ query: { gallery: 'active' } })
       this.selectedImgIndex = index
       !state ? this.galleryActive = true : this.galleryActive = false
-      // Emitted to GalleryComponent.vue
-      EventBus.$emit('focusGallery')
+      this.$refs.gallery.$el.focus()
     }
   },
   computed: {

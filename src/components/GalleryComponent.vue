@@ -101,12 +101,6 @@ export default {
       currentImageIndex: 0
     }
   },
-  mounted () {
-    // Emmitted from CategoryPage.vue
-    EventBus.$on('focusGallery', (category) => {
-      this.$refs.gallery.focus()
-    })
-  },
   methods: {
     prevImg () {
       const val = this.currentImageIndex - 1

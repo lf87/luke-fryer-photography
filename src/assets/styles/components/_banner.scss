@@ -155,8 +155,44 @@
   }
 }
 
-.banner__back__svg {
+.banner__back-svg {
   fill: $c-white;
   width: 15px;
+  height: 100%;
+}
+
+.banner__down-arrow {
+  // @include transition(opacity transform, 0.5s, ease-in-out, 0.5s);
+  transition: opacity 0.5s ease-in-out 0.5s;
+  transition: transform 0.15s ease-in-out;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1rem;
+  left: calc(50% - 1.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  width: 3rem;
+  z-index: $z-banner__back;
+  opacity: 0;
+
+  &:hover {
+    transform: translate3d(0, 1px, 0)
+  }
+}
+
+.banner__down-arrow {
+  .transitions-active & {
+    opacity: 0.75;
+  }
+}
+
+.banner__down-arrow-svg {
+  fill: $c-white;
+  width: 14px;
   height: 100%;
 }

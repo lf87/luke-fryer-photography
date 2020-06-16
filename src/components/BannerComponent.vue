@@ -5,7 +5,7 @@
       :class="['banner__back', { 'active': bannerIconsActive }]"
       :to="{ name: 'HomePage' }"
     >
-      <svg class="banner__back__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 408.65">
+      <svg class="banner__back-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492 408.65">
         <path
           d="M464.34 165.74l.77.17H135.89l103.5-103.72c5.07-5.06 7.85-11.92 7.85-19.12 0-7.2-2.78-14.01-7.85-19.09l-16.1-16.11C218.22 2.8 211.47 0 204.27 0c-7.2 0-13.95 2.78-19.02 7.84L7.84 185.24C2.76 190.32-.02 197.1 0 204.3c-.02 7.24 2.76 14.02 7.84 19.1l177.41 177.41c5.06 5.06 11.81 7.84 19.02 7.84 7.2 0 13.94-2.79 19.01-7.84l16.1-16.11c5.07-5.06 7.85-11.81 7.85-19.01 0-7.2-2.78-13.59-7.85-18.65l-104.66-104.3h329.99c14.83 0 27.29-12.78 27.29-27.6v-22.79c0-14.83-12.83-26.61-27.66-26.61z"
         />
@@ -74,6 +74,13 @@
       <span class="banner__large-text">{{ data[getActiveCategoryIndex].largeHeading }}</span>
       <span class="banner__small-text">{{ data[getActiveCategoryIndex].smallHeading }}</span>
     </h1>
+    <button class="banner__down-arrow" v-on:click="scrollDown" aria-label="Scroll down">
+      <svg class="banner__down-arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408.65 492">
+        <path
+          d="M165.74 27.66l.17-.77v329.22L62.19 252.62c-5.06-5.07-11.92-7.85-19.12-7.85-7.2 0-14.01 2.78-19.09 7.85l-16.11 16.1C2.8 273.78 0 280.53 0 287.73c0 7.2 2.78 13.95 7.84 19.02l177.4 177.41c5.08 5.08 11.86 7.86 19.06 7.84 7.24.02 14.02-2.76 19.1-7.84l177.41-177.41c5.06-5.06 7.84-11.81 7.84-19.02 0-7.2-2.79-13.94-7.84-19.01l-16.11-16.1c-5.06-5.07-11.81-7.85-19.01-7.85-7.2 0-13.59 2.78-18.65 7.85l-104.3 104.66V27.29c0-14.83-12.78-27.29-27.6-27.29h-22.79c-14.83 0-26.61 12.83-26.61 27.66z"
+        />
+      </svg>
+    </button>
   </header>
 </template>
 
@@ -89,16 +96,11 @@ export default {
       activeCategory: 'austria',
       bannerIconsActive: true,
       isScrolling: false,
-      // getActiveCategoryIndex: '0',
       largeText: '',
       smallText: '',
       primaryImageLoaded: false
     }
   },
-  // updated: function () {
-  //   this.$nextTick(() => {
-  //     })
-  // },
   mounted () {
     this.largeText = 'Luke Fryer'
     this.smallText = 'Photographer'
@@ -154,6 +156,14 @@ export default {
       } else if (!this.isScrolling) {
         this.bannerIconsActive = true
       }
+    },
+    scrollDown () {
+      const bodyHeight = document.body.clientHeight
+      window.scrollTo({
+        top: bodyHeight,
+        left: 0,
+        behavior: 'smooth'
+      })
     }
   },
   computed: {

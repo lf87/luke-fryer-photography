@@ -26,13 +26,12 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # To do
 
-* back home btn
-* Add link to twitter bio
-* close prev next btns styling for gallery
+* custom scrollbars
 * down arrow on the banner (may as well use plugin to make it scroll)
 * favicons etc.
 * clean up junk files/code/lint
 * test test test!
 
 # Issues
-* firefox mobile - massive lag after clicking router link
+* Cache not clearing on git pages
+* firefox mobile - massive lag after clicking router link - could be a buggy scroll plugin, try native for testing purposes
