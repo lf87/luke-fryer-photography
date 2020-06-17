@@ -17,10 +17,6 @@
   display: flex;
   flex-direction: column;
 
-  *:focus {
-    outline: 2px rgba($c-white, 0.75) solid;
-  }
-
   &:hover,
   &:active {
     .grid__img {

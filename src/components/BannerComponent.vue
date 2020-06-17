@@ -158,9 +158,9 @@ export default {
       }
     },
     scrollDown () {
-      const bodyHeight = document.body.clientHeight
+      const elOffset = document.querySelector('.grid').offsetTop
       window.scrollTo({
-        top: bodyHeight,
+        top: elOffset,
         left: 0,
         behavior: 'smooth'
       })

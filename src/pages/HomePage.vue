@@ -1,7 +1,7 @@
 <template>
   <div v-if="dataFetched" class="home">
     <BannerComponent :data="data" :dataFetched="dataFetched" :categories="categories"></BannerComponent>
-    <CategoriesComponent :data="data"  ref="categories"></CategoriesComponent>
+    <CategoriesComponent :data="data" ref="categories"></CategoriesComponent>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import BannerComponent from '@/components/BannerComponent.vue'
 import CategoriesComponent from '@/components/CategoriesComponent.vue'
 import EventBus from '@/event-bus/event-bus.js'
-import scroll from '@/assets/js/vendor/scroll.js'
+// import scroll from '@/assets/js/vendor/scroll.js'
 
 export default {
   name: 'HomePage',
@@ -24,12 +24,24 @@ export default {
     }
 
     // Emitted to BannerComponent.vue
-    scroll(
-      0,
-      600,
-      'easeOutCubic',
-      updateSelectedCategory
-    )
+    // scroll(
+    //   0,
+    //   600,
+    //   'easeOutCubic',
+    //   updateSelectedCategory
+    // )
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+
+    setTimeout(() => {
+      // Emitted to BannerComponent.vue
+
+      updateSelectedCategory()
+    }, 600)
 
     setTimeout(() => {
       // Emitted to App.vue
