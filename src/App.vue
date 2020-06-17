@@ -1,7 +1,6 @@
 <template>
   <div :class="['app', { 'transitions-active': transitionsActive }]" id="app">
     <router-view
-      :dataFetched="dataFetched"
       :data="data"
       :categories="categories"
       :key="$route.path"
@@ -36,8 +35,7 @@ export default {
       'macro',
       'astrophotography'
     ],
-    data: [],
-    dataFetched: false
+    data: []
   }),
   created () {
     const iterator = this.categories.values()
@@ -66,7 +64,6 @@ export default {
 
       await Promise.all(promises).then(data => {
         this.data = data
-        this.dataFetched = true
       })
     }
 

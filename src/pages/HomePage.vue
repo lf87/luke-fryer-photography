@@ -1,6 +1,6 @@
 <template>
-  <div v-if="dataFetched" class="home">
-    <BannerComponent :data="data" :dataFetched="dataFetched" :categories="categories"></BannerComponent>
+  <div class="home">
+    <BannerComponent :data="data" :categories="categories"></BannerComponent>
     <CategoriesComponent :data="data" ref="categories"></CategoriesComponent>
   </div>
 </template>
@@ -13,7 +13,7 @@ import EventBus from '@/event-bus/event-bus.js'
 
 export default {
   name: 'HomePage',
-  props: ['data', 'dataFetched', 'categories'],
+  props: ['data', 'categories'],
   components: {
     BannerComponent,
     CategoriesComponent

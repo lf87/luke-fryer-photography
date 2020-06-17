@@ -1,5 +1,5 @@
 <template>
-  <header v-if="dataFetched" class="banner">
+  <header class="banner">
     <router-link
       v-if="currentRouteName !== 'HomePage'"
       :class="['banner__back', { 'active': bannerIconsActive }]"
@@ -89,7 +89,7 @@ import EventBus from '@/event-bus/event-bus.js'
 
 export default {
   name: 'BannerComponent',
-  props: ['category', 'data', 'categories', 'dataFetched'],
+  props: ['category', 'data', 'categories'],
   data () {
     return {
       selectCategory: '',

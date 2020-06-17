@@ -1,10 +1,9 @@
 <template>
-  <main v-if="dataFetched" class="category">
+  <main class="category">
     <BannerComponent
       :data="data"
       :category="category"
       :categories="categories"
-      :dataFetched="dataFetched"
     ></BannerComponent>
     <section class="grid">
       <template v-for="(image, index) in data[getActiveCategoryIndex].images">
@@ -47,7 +46,7 @@ import EventBus from '@/event-bus/event-bus.js'
 
 export default {
   name: 'categoryPage',
-  props: ['data', 'category', 'categories', 'dataFetched'],
+  props: ['data', 'category', 'categories'],
   components: {
     BannerComponent,
     GalleryComponent
