@@ -16,7 +16,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-
   &:nth-child(odd) {
     background-color: lighten($c-mine-shaft, 3%);
   }
