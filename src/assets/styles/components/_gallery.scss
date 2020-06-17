@@ -37,13 +37,8 @@
   width: 55px;
   position: absolute;
   align-self: flex-end;
-  // height: calc(55px - 2rem);
   width: calc(15px + 3.4rem);
   height: calc(15px + 4rem);
-  // padding-top: 2rem;
-  // padding-right: 2rem;
-  // padding-bottom: 2rem;
-  // padding-left: 2rem;
   bottom: 0;
   z-index: $z-gallery__btn;
   display: flex;
@@ -155,4 +150,14 @@
   height: 15px;
   z-index: 1;
   fill: rgba($c-white, 1);
+}
+
+// Dummy element so user doesn't accidently close the gallery when clicking through past the last image
+.gallery__plz-dont-close {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 170px;
+  height: 5rem;
+  opacity: 0;
 }
