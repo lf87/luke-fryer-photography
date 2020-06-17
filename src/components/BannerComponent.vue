@@ -75,7 +75,11 @@
       <span class="banner__small-text">{{ data[getActiveCategoryIndex].smallHeading }}</span>
     </h1>
     <button class="banner__down-arrow" v-on:click="scrollDown" aria-label="Scroll down">
-      <svg class="banner__down-arrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408.65 492">
+      <svg
+        class="banner__down-arrow-svg"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 408.65 492"
+      >
         <path
           d="M165.74 27.66l.17-.77v329.22L62.19 252.62c-5.06-5.07-11.92-7.85-19.12-7.85-7.2 0-14.01 2.78-19.09 7.85l-16.11 16.1C2.8 273.78 0 280.53 0 287.73c0 7.2 2.78 13.95 7.84 19.02l177.4 177.41c5.08 5.08 11.86 7.86 19.06 7.84 7.24.02 14.02-2.76 19.1-7.84l177.41-177.41c5.06-5.06 7.84-11.81 7.84-19.02 0-7.2-2.79-13.94-7.84-19.01l-16.11-16.1c-5.06-5.07-11.81-7.85-19.01-7.85-7.2 0-13.59 2.78-18.65 7.85l-104.3 104.66V27.29c0-14.83-12.78-27.29-27.6-27.29h-22.79c-14.83 0-26.61 12.83-26.61 27.66z"
         />
@@ -111,14 +115,12 @@ export default {
       }, 100)
     })
 
-    if (!this.category) {
-      // If home page
+    if (this.$route.name === 'HomePage') {
       // Fade in main image on top of blurry image
       this.$refs.imagePrimary.onload = () => {
         this.primaryImageLoaded = true
       }
-    } else {
-      // If category page
+    } else if (this.$route.name === 'CategoryPage') {
       this.activeCategory = this.category
 
       this.$nextTick(() => {
@@ -144,19 +146,8 @@ export default {
       this.selectCategory = category
       this.transitionsActive = false
     })
-
-    // Remove social icon upon scroll greater than 0 from top
-    const stickyObserver = new IntersectionObserver(this.sticky)
-    stickyObserver.observe(document.querySelector('.grid__item'))
   },
   methods: {
-    sticky (entry) {
-      if (entry[0].isIntersecting) {
-        this.bannerIconsActive = false
-      } else if (!this.isScrolling) {
-        this.bannerIconsActive = true
-      }
-    },
     scrollDown () {
       const elOffset = document.querySelector('.grid').offsetTop
       window.scrollTo({
