@@ -26,9 +26,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # To do
 
-* custom scrollbars
-* down arrow on the banner (may as well use plugin to make it scroll)
-* favicons etc.
 * clean up junk files/code/lint
 * test test test!
 
