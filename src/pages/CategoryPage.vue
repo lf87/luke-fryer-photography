@@ -1,10 +1,6 @@
 <template>
   <main class="category">
-    <BannerComponent
-      :data="data"
-      :category="category"
-      :categories="categories"
-    ></BannerComponent>
+    <BannerComponent :data="data" :category="category" :categories="categories"></BannerComponent>
     <section class="grid">
       <template v-for="(image, index) in data[getActiveCategoryIndex].images">
         <button
@@ -21,7 +17,7 @@
         /img/photography/${category}/${image.file}-1080.jpg 1080w`"
             :src="`/img/photography/${category}/${image.file}-2560.jpg`"
             loading="lazy"
-            alt="alt"
+            :alt="image.alt"
           />
         </button>
       </template>

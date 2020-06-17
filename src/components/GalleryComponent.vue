@@ -16,7 +16,7 @@
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1440.jpg 1440w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1080.jpg 1080w`"
       :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-2560.jpg`"
-      alt="placeholder"
+      :alt="data[getActiveCategoryIndex].images[currentImageIndex - 1].alt"
     />
     <img
       v-if="currentImageIndex !== 0"
@@ -27,7 +27,7 @@
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1440.jpg 1440w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1080.jpg 1080w`"
       :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex - 1].file}-2560.jpg`"
-      alt="first"
+      :alt="data[getActiveCategoryIndex].images[currentImageIndex - 1].alt"
     />
     <img
       v-if="currentImageIndex !== getCategoryImagesLength"
@@ -38,7 +38,7 @@
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1440.jpg 1440w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1080.jpg 1080w`"
       :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex + 1].file}-2560.jpg`"
-      alt="last"
+      :alt="data[getActiveCategoryIndex].images[currentImageIndex - 1].alt"
     />
     <button
       v-if="currentImageIndex !== 0"
@@ -58,6 +58,7 @@
         </svg>
       </div>
     </button>
+    <div class="gallery__plz-dont-close"></div>
     <button
       v-if="currentImageIndex !== getCategoryImagesLength"
       class="gallery__btn gallery__btn--next"

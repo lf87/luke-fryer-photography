@@ -17,7 +17,7 @@
         /img/photography/${category.name}/${category.images[0].file}-1080.jpg 1080w`"
           :src="`/img/photography/${category.name}/${category.images[0].file}-1920.jpg`"
           loading="lazy"
-          alt="placeholder"
+          :alt="category.images[0].alt"
         />
         <div class="grid__heading">
           <span class="grid__text">{{category.largeHeading}}</span>

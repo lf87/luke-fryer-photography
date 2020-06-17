@@ -52,7 +52,7 @@
       sizes="(min-width: 768px) and (min-height: 700px) 1920px, (min-width: 1440px) and (min-height: 700px) 2560px"
       srcset="/img/photography/austria/austria-03-2560.jpg 2560w, /img/photography/austria/austria-03-1920.jpg 1920w, /img/photography/austria/austria-03-1440.jpg 1440w, /img/photography/austria/austria-03-1080.jpg 1080w"
       src="/img/photography/austria/austria-03-1920.jpg"
-      alt="Austria"
+      alt="Beautiful, stunning image of Austria"
       ref="imagePrimary"
     />
     <img
