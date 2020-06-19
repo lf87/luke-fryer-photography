@@ -8,6 +8,7 @@
     tabindex="-1"
     ref="gallery"
   >
+    <span class="gallery__desc">A short description of the image, no longer than this</span>
     <img
       class="gallery__img"
       sizes="(max-width: 2560px) 100vw, 2560px"
@@ -39,7 +40,7 @@
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1080.jpg 1080w`"
       :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex + 1].file}-2560.jpg`"
       alt=""
-    /> -->
+    />-->
     <button
       v-if="currentImageIndex !== 0"
       class="gallery__btn gallery__btn--prev"

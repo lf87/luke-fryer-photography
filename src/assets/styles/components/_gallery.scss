@@ -18,9 +18,31 @@
   }
 }
 
+.gallery__desc {
+  position: absolute;
+  font-size: 13px;
+  line-height: 1.15;
+  color: $c-white;
+  z-index: 9;
+  bottom: 0;
+  left: 0;
+  max-width: calc(100% - 9.9rem);
+  padding-top: 0.35rem;
+  padding-right: 0.35rem;
+  padding-bottom: 0.35rem;
+  padding-left: 0.35rem;
+  background-color: rgba($c-black, 0.666);
+
+  @include bp(sm) {
+    font-size: 14px;
+  }
+}
+
 .gallery__img {
   max-height: 100%;
   max-width: $app-max-width;
+  width: 100%;
+  object-fit: contain;
 }
 
 .gallery__img--hide {
