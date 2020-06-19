@@ -8,17 +8,19 @@
     tabindex="-1"
     ref="gallery"
   >
-    <span class="gallery__desc">A short description of the image, no longer than this</span>
-    <img
-      class="gallery__img"
-      sizes="(max-width: 2560px) 100vw, 2560px"
-      :srcset="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-2560.jpg 2560w,
+    <figure class="gallery__img-wrap">
+      <img
+        class="gallery__img"
+        sizes="(max-width: 2560px) 100vw, 2560px"
+        :srcset="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-2560.jpg 2560w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1920.jpg 1920w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1440.jpg 1440w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1080.jpg 1080w`"
-      :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-2560.jpg`"
-      :alt="data[getActiveCategoryIndex].images[currentImageIndex].alt"
-    />
+        :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-2560.jpg`"
+        :alt="data[getActiveCategoryIndex].images[currentImageIndex].alt"
+      />
+      <figcaption class="gallery__desc">A short description of the image, no longer than this</figcaption>
+    </figure>
     <!-- <img
       v-if="currentImageIndex !== 0"
       class="gallery__img--hide"
@@ -105,12 +107,16 @@ export default {
   },
   methods: {
     prevImg () {
-      const val = this.currentImageIndex - 1
-      this.getSelectedImgIndex(val)
+      if (this.currentImageIndex !== 0) {
+        const val = this.currentImageIndex - 1
+        this.getSelectedImgIndex(val)
+      }
     },
     nextImg () {
-      const val = this.currentImageIndex + 1
-      this.getSelectedImgIndex(val)
+      if (this.currentImageIndex !== this.getCategoryImagesLength) {
+        const val = this.currentImageIndex + 1
+        this.getSelectedImgIndex(val)
+      }
     },
     getSelectedImgIndex (val) {
       this.currentImageIndex = val
