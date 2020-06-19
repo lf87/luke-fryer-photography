@@ -16,9 +16,9 @@
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1440.jpg 1440w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1080.jpg 1080w`"
       :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-2560.jpg`"
-      :alt="data[getActiveCategoryIndex].images[currentImageIndex - 1].alt"
+      :alt="data[getActiveCategoryIndex].images[currentImageIndex].alt"
     />
-    <img
+    <!-- <img
       v-if="currentImageIndex !== 0"
       class="gallery__img--hide"
       sizes="(max-width: 2560px) 100vw, 2560px"
@@ -27,7 +27,7 @@
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1440.jpg 1440w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1080.jpg 1080w`"
       :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex - 1].file}-2560.jpg`"
-      :alt="data[getActiveCategoryIndex].images[currentImageIndex - 1].alt"
+      alt=""
     />
     <img
       v-if="currentImageIndex !== getCategoryImagesLength"
@@ -38,8 +38,8 @@
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1440.jpg 1440w,
         /img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-1080.jpg 1080w`"
       :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex + 1].file}-2560.jpg`"
-      :alt="data[getActiveCategoryIndex].images[currentImageIndex - 1].alt"
-    />
+      alt=""
+    /> -->
     <button
       v-if="currentImageIndex !== 0"
       class="gallery__btn gallery__btn--prev"
