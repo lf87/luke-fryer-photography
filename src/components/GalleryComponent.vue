@@ -19,7 +19,7 @@
         :src="`/img/photography/${category}/${data[getActiveCategoryIndex].images[currentImageIndex].file}-2560.jpg`"
         :alt="data[getActiveCategoryIndex].images[currentImageIndex].alt"
       />
-      <figcaption class="gallery__desc">A short description of the image, no longer than this</figcaption>
+      <figcaption class="gallery__desc">{{data[getActiveCategoryIndex].images[currentImageIndex].alt}}</figcaption>
     </figure>
     <!-- <img
       v-if="currentImageIndex !== 0"

@@ -37,21 +37,21 @@
 
 
 .gallery__desc {
+  @include font-size(13px);
   position: absolute;
-  font-size: 13px;
-  line-height: 1.15;
+  // font-size: 13px;
+  // line-height: 1.15;
   color: $c-white;
-  bottom: 0.25rem;
-  left: 0.25rem;
-  // max-width: calc(100% - 8.9rem);
-  padding-top: 0.35rem;
-  padding-right: 0.35rem;
-  padding-bottom: 0.35rem;
-  padding-left: 0.35rem;
-  background-color: rgba($c-black, 0.666);
+  bottom: 0;
+  left: 0;
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+  padding-bottom: 0.35em;
+  padding-left: 0.5em;
+  background-color: rgba($c-black, 0.7);
 
   @include bp(sm) {
-    font-size: 14px;
+    // font-size: 14px;
   }
 }
 
