@@ -65,23 +65,18 @@
     },
     {
       "file": "carpathians-13",
-      "alt": "Waterfall",
+      "alt": "",
       "layout": "landscape"
     },
     {
       "file": "carpathians-14",
-      "alt": "Waterfall",
+      "alt": "",
       "layout": "landscape"
     },
     {
       "file": "carpathians-15",
-      "alt": "Waterfall",
+      "alt": "",
       "layout": "landscape"
-    },
-    {
-      "file": "carpathians-15",
-      "alt": "carpathians-01",
-      "layout": "panoramic"
     }
   ]
 }
