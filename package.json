@@ -5,12 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "lint": "sass-lint -v",
-    "lint:fix": "sass-lint-auto-fix"
+    "style-lint": "npx stylelint \"**/*.scss\"",
+    "style-lint-fix": "npx stylelint \"**/*.scss\" --fix"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "stylelint-config-sass-guidelines": "^7.0.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -28,8 +28,10 @@
     "import-glob-loader": "^1.1.0",
     "lodash": "^4.17.15",
     "sass": "^1.26.5",
-    "sass-lint-auto-fix": "^0.21.0",
     "sass-loader": "^8.0.2",
+    "stylelint": "^13.6.1",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-order": "^4.1.0",
     "vue-router": "^3.3.2",
     "vue-template-compiler": "^2.6.11"
   }

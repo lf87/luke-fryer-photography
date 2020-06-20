@@ -146,17 +146,17 @@ img {
 
 button {
   @include remove-tap-highlight;
+  appearance: none;
   background-color: transparent;
-  border-radius: 0;
   border: 0;
-  padding: 0;
-  -webkit-appearance: none;
+  border-radius: 0;
   box-shadow: none;
   outline: none;
+  padding: 0;
 }
 
 input {
-  -webkit-appearance: none;
-  box-shadow: none;
+  appearance: none;
   border-radius: 0;
+  box-shadow: none;
 }

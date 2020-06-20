@@ -1,13 +1,13 @@
-@import "utils/vars";
-@import "utils/layout-mixins";
-@import "utils/project-mixins";
-@import "utils/mixins";
-@import "utils/reset";
+@import 'utils/vars';
+@import 'utils/layout-mixins';
+@import 'utils/project-mixins';
+@import 'utils/mixins';
+@import 'utils/reset';
 
-@import "global/fonts";
-@import "global/main";
-@import "global/grid";
-@import "components/**/*";
+@import 'global/fonts';
+@import 'global/main';
+@import 'global/grid';
+@import 'components/**/*';
 
 .fade-enter-active,
 .fade-leave-active {

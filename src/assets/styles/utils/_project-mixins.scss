@@ -1,40 +1,40 @@
 @mixin patterned-bg {
   background-color: $c-mine-shaft;
-  background-image: url("../img/bg.png");
+  background-image: url('../img/bg.png');
   background-repeat: repeat;
 }
 
 @mixin full-flex($dir: column) {
   display: flex;
+  flex-direction: $dir;
   position: relative;
   width: 100%;
-  flex-direction: $dir;
 }
 
 @mixin large-heading() {
   @include font-size(60px);
   @include transition(opacity transform, 3s, $ease-out-quint);
-  transform: translate3d(0, 0.25rem, 0);
-  opacity: 0;
   font-family: $f-handwriting;
-  text-shadow: $text-shadow;
+  opacity: 0;
   text-align: center;
+  text-shadow: $text-shadow;
+  transform: translate3d(0, 0.25rem, 0);
 
   .transitions-active & {
-    transform: translate3d(0, 0, 0);
     opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @mixin blurry-bg($colour: $c-mine-shaft, $opacity: 0.3) {
   &::before {
-    content: "";
     background-color: rgba($colour, $opacity);
-    position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    content: '';
     filter: blur(10px);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
   }
 }

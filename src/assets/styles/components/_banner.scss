@@ -1,21 +1,21 @@
 .banner {
   @include full-flex;
-  height: 100vh;
-  min-height: -webkit-fill-available;
   align-items: center;
+  height: 100vh;
   justify-content: center;
+  min-height: stretch;
 }
 
 .banner__img {
   filter: $image-filter;
-  width: 100%;
-  position: absolute;
-  top: 0;
+  height: 100%;
   left: 0;
   max-width: none;
-  height: 100%;
   object-fit: cover;
   object-position: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .banner__img--blurry-hide {
@@ -42,66 +42,66 @@
 }
 
 .banner__heading {
-  position: relative;
+  color: darken($c-white, 10%);
   display: flex;
   flex-direction: column;
   opacity: 0.9;
-  color: darken($c-white, 10%);
+  position: relative;
 }
 
 .banner__large-text {
   @include font-size(60px);
   @include transition(opacity transform, 0.75s, $ease-in-cubic);
-  transform: translate3d(1rem, 0, 0);
-  opacity: 0;
   font-family: $f-handwriting;
-  text-shadow: $text-shadow;
-  text-align: center;
   font-size: 8vmax;
+  opacity: 0;
+  text-align: center;
+  text-shadow: $text-shadow;
+  transform: translate3d(1rem, 0, 0);
 
   @include bp(md) {
     @include font-size(60px);
   }
 
   .transitions-active & {
-    transition-timing-function: $ease-out-cubic;
-    transform: translate3d(0, 0, 0);
     opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition-timing-function: $ease-out-cubic;
   }
 }
 
 .banner__small-text {
   @include font-size(20px);
   @include transition(opacity transform, 1s, $ease-in-cubic, 0.1s);
-  transform: translate3d(-1rem, 0, 0);
+  font-family: $f-handwriting;
+  letter-spacing: 1px;
   opacity: 0;
   text-align: center;
-  letter-spacing: 1px;
-  font-family: $f-handwriting;
   text-shadow: $text-shadow;
+  transform: translate3d(-1rem, 0, 0);
 
   .transitions-active & {
-    transition-timing-function: $ease-out-cubic;
-    transform: translate3d(0, 0, 0);
     opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition-timing-function: $ease-out-cubic;
   }
 }
 
 .banner__social-icon {
   @include transition(background-color opacity, 0.15s, ease-in-out);
-  z-index: $z-banner__social-icon;
-  width: calc(30px + 0.75rem);
-  height: calc(30px + 0.75rem);
-  position: absolute;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  top: 1rem;
-  left: 1rem;
   background-color: rgba($c-white, 0.2);
   border-radius: 10px;
   border-bottom-right-radius: 30px;
+  display: flex;
+  height: calc(30px + 0.75rem);
+  justify-content: center;
+  left: 1rem;
   opacity: 0;
+  position: absolute;
+  top: 1rem;
+  width: calc(30px + 0.75rem);
+  z-index: $z-banner__social-icon;
 
   &:hover {
     background-color: rgba($c-white, 0.45);
@@ -121,28 +121,27 @@
 
 .banner__social-icon-svg {
   display: block;
-  width: 28px;
   height: 23px;
-  transform: rotate(5deg);
   opacity: 0.4;
+  transform: rotate(5deg);
+  width: 28px;
 }
 
 .banner__back {
   @include transition(opacity, 1s, ease-in-out, 0.5s);
   @include blurry-bg($c-white, 0.05);
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
   align-items: center;
+  display: none;
   justify-content: center;
-  padding-top: 1rem;
-  padding-right: 1rem;
+  left: 0;
+  opacity: 0;
   padding-bottom: 1rem;
   padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  position: fixed;
+  top: 0;
   z-index: $z-banner__back;
-  opacity: 0;
-  display: none;
 
   @include bp(sm) {
     display: flex;
@@ -161,26 +160,26 @@
 
 .banner__back-svg {
   fill: $c-white;
-  width: 15px;
   height: 100%;
+  width: 15px;
 }
 
 .banner__down-arrow {
-  // @include transition(opacity transform, 0.5s, ease-in-out, 0.5s);
-  transition: opacity 1s ease-in-out 1s, transform 0.15s ease-in-out;
-  cursor: pointer;
-  position: absolute;
-  bottom: 1rem;
-  left: calc(50% - 1.5rem);
-  display: flex;
   align-items: center;
+  bottom: 1rem;
+  cursor: pointer;
+  display: flex;
   justify-content: center;
-  padding-top: 1rem;
-  padding-right: 1rem;
+  left: calc(50% - 1.5rem);
+  opacity: 0;
   padding-bottom: 1rem;
   padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  position: absolute;
+  // @include transition(opacity transform, 0.5s, ease-in-out, 0.5s);
+  transition: opacity 1s ease-in-out 1s, transform 0.15s ease-in-out;
   width: 3rem;
-  opacity: 0;
 
   &:hover {
     transform: translate3d(0, 1px, 0);
@@ -195,6 +194,6 @@
 
 .banner__down-arrow-svg {
   fill: $c-white;
-  width: 14px;
   height: 100%;
+  width: 14px;
 }

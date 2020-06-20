@@ -1,20 +1,18 @@
 // Rem caculation and auto line height
-@function calculateRem($size) {
+@function calculate-rem($size) {
   $remSize: $size / 16px;
   @return #{$remSize}rem;
 }
 
 @mixin font-size($size, $line: $size * 1.5) {
-  font-size: $size;
-  line-height: $line;
-  line-height: calculateRem($line);
-  font-size: calculateRem($size);
+  font-size: calculate-rem($size);
+  line-height: calculate-rem($line);
 }
 
 // @include font-name
 // List all weights here e.g. 400i, 400, 500, 700
 @mixin font-name($weight: 400, $style: normal) {
-  font-family: "Google Font", serif;
+  font-family: 'Google Font', serif;
   font-weight: $weight;
 }
 
@@ -31,9 +29,8 @@
 
 // @include remove-tap-highlight
 @mixin remove-tap-highlight {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
-  -webkit-tap-highlight-color: transparent !important;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -43,8 +40,8 @@
   $valueWillChange: ();
   @each $property in $properties {
     @if length($value) > 0 {
-      $value: append($value, unquote(",") #{$property} $duration $method $delay);
-      $valueWillChange: append($valueWillChange, unquote(",") #{$property});
+      $value: append($value, unquote(',') #{$property} $duration $method $delay);
+      $valueWillChange: append($valueWillChange, unquote(',') #{$property});
     } @else {
       $value: append($value, #{$property} $duration $method $delay);
       $valueWillChange: append($valueWillChange, #{$property});
@@ -61,33 +58,15 @@
 
 // @include responsive-ratio(16,9);
 @mixin responsive-ratio($x, $y, $pseudo: false) {
-  $padding: unquote(($y / $x) * 100 + "%");
+  $padding: unquote(($y / $x) * 100 + '%');
   @if $pseudo {
-    &:before {
+    &::before {
       @include pseudo($pos: relative);
-      width: 100%;
       padding-top: $padding;
+      width: 100%;
     }
   } @else {
     padding-top: $padding;
   }
 }
 
-// @include input-placeholder {}
-@mixin input-placeholder {
-  &.placeholder {
-    @content;
-  }
-  &:-moz-placeholder {
-    @content;
-  }
-  &::-moz-placeholder {
-    @content;
-  }
-  &:-ms-input-placeholder {
-    @content;
-  }
-  &::-webkit-input-placeholder {
-    @content;
-  }
-}
