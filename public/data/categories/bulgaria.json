@@ -9,6 +9,11 @@
       "layout": "landscape"
     },
     {
+      "file": "bulgaria-03",
+      "alt": "Old Town, Nessebar",
+      "layout": "portrait"
+    },
+    {
       "file": "bulgaria-13",
       "alt": "Church of St. John Aliturgetos, Nessebar",
       "layout": "landscape"
@@ -16,6 +21,16 @@
     {
       "file": "bulgaria-14",
       "alt": "Church of St. John the Baptist, Nessebar",
+      "layout": "square"
+    },
+    {
+      "file": "bulgaria-02",
+      "alt": "Spot the human",
+      "layout": "landscape"
+    },
+    {
+      "file": "bulgaria-01",
+      "alt": "Bulgarian bagpipes (I don't actually know what this is)",
       "layout": "landscape"
     }
   ]
