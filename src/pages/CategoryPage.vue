@@ -10,7 +10,7 @@
         >
           <img
             class="grid__img"
-            sizes="(max-width: 2560px) 100vw, 2560px"
+            sizes="(min-width: 768px) and (min-height: 700px) 1920px, (min-width: 1440px) and (min-height: 700px) 2560px"
             :srcset="`/img/photography/${category}/${image.file}-2560.jpg 2560w,
         /img/photography/${category}/${image.file}-1920.jpg 1920w,
         /img/photography/${category}/${image.file}-1440.jpg 1440w,
