@@ -5,42 +5,42 @@
   "images": [
     {
       "file": "fireworks-07",
-      "alt": "fireworks-01",
+      "alt": "Sparkle!",
       "layout": "square"
     },
     {
       "file": "fireworks-02",
-      "alt": "fireworks-02",
+      "alt": "Whoosh!",
       "layout": "portrait"
     },
     {
       "file": "fireworks-01",
-      "alt": "fireworks-03",
+      "alt": "Blast!",
       "layout": "landscape"
     },
     {
       "file": "fireworks-04",
-      "alt": "fireworks-04",
+      "alt": "Fizz!",
       "layout": "square"
     },
     {
       "file": "fireworks-05",
-      "alt": "fireworks-05",
+      "alt": "Pop!",
       "layout": "square"
     },
     {
       "file": "fireworks-06",
-      "alt": "fireworks-06",
+      "alt": "Ping!",
       "layout": "portrait"
     },
     {
       "file": "fireworks-07",
-      "alt": "fireworks-07",
+      "alt": "Whizz!",
       "layout": "landscape"
     },
     {
       "file": "fireworks-08",
-      "alt": "fireworks-08",
+      "alt": "Whoosh!",
       "layout": "landscape"
     }
   ]

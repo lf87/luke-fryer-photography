@@ -1,71 +1,71 @@
 {
   "name": "formula-1",
   "largeHeading": "Formula 1",
-  "smallHeading": "",
+  "smallHeading": "2020 Pre-season testing",
   "images": [
     {
       "file": "formula-1-05",
-      "alt": "formula-1-01",
+      "alt": "Alexander Albon in the RB16",
       "layout": "square"
     },
     {
       "file": "formula-1-02",
-      "alt": "formula-1-02",
+      "alt": "Sebastian Vettel at full throttle in the SF1000",
       "layout": "panoramic"
     },
     {
       "file": "formula-1-03",
-      "alt": "formula-1-03",
+      "alt": "DRS activated",
       "layout": "square"
     },
     {
       "file": "formula-1-04",
-      "alt": "formula-1-04",
+      "alt": "The pink Mercedes (RP20)",
       "layout": "landscape"
     },
     {
       "file": "formula-1-01",
-      "alt": "formula-1-05",
+      "alt": "He's back! Ocon in the all black R.S.20 (testing livery)",
       "layout": "panoramic"
     },
     {
       "file": "formula-1-06",
-      "alt": "formula-1-06",
+      "alt": "\"Bwooahhitsthesameforeveryone\" - Kimi in the C39",
       "layout": "landscape"
     },
     {
       "file": "formula-1-07",
-      "alt": "formula-1-07",
+      "alt": "Alexander Albon navigating the bumpy final sector",
       "layout": "landscape"
     },
     {
       "file": "formula-1-08",
-      "alt": "formula-1-08",
+      "alt": "Future WDC George Russell in the FW43",
       "layout": "landscape"
     },
     {
       "file": "formula-1-09",
-      "alt": "formula-1-09",
+      "alt": "Next level stock Photography",
       "layout": "square"
     },
     {
       "file": "formula-1-10",
-      "alt": "carpathians-09",
+      "alt": "Twitch streamer Lando Norris in the MCL35",
       "layout": "landscape"
     },
     {
       "file": "formula-1-11",
-      "alt": "formula-1-11",
+      "alt": "To whom it may concern, this is the W11",
       "layout": "landscape"
     },
     {
       "file": "formula-1-12",
-      "alt": "formula-1-01",
+      "alt": "Marbles",
       "layout": "portrait"
     },
     {
       "file": "formula-1-13",
-      "alt": "formula-1-01",
+      "alt": "\"The Paywall\"",
       "layout": "landscape"
     }
   ]
