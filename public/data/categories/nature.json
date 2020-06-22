@@ -5,37 +5,37 @@
   "images": [
     {
       "file": "nature-03",
-      "alt": "nature-01",
+      "alt": "Tropical World, Roundhay",
       "layout": "landscape"
     },
     {
       "file": "nature-02",
-      "alt": "nature-02",
+      "alt": "Female Swan (pen)",
       "layout": "landscape"
     },
     {
       "file": "nature-01",
-      "alt": "nature-03",
+      "alt": "Perfect for quills",
       "layout": "landscape"
     },
     {
       "file": "nature-04",
-      "alt": "nature-04",
+      "alt": "Birb",
       "layout": "square"
     },
     {
       "file": "nature-05",
-      "alt": "nature-05",
+      "alt": "\"Don't look at me\"",
       "layout": "landscape"
     },
     {
       "file": "nature-06",
-      "alt": "nature-06",
+      "alt": "\"Want to buy car insurance?\"",
       "layout": "landscape"
     },
     {
       "file": "nature-07",
-      "alt": "nature-07",
+      "alt": "One of the Lowther lakes, Allerton Bywater",
       "layout": "landscape"
     }
   ]

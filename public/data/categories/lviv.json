@@ -1,76 +1,71 @@
 {
   "name": "lviv",
   "largeHeading": "Lviv",
-  "smallHeading": "",
+  "smallHeading": "The city of the lion",
   "images": [
     {
       "file": "lviv-01",
-      "alt": "lviv-01",
+      "alt": "View from Lviv City Hall",
       "layout": "landscape"
     },
     {
       "file": "lviv-02",
-      "alt": "lviv-02",
+      "alt": "",
       "layout": "landscape"
     },
     {
       "file": "lviv-03",
-      "alt": "lviv-03",
+      "alt": "House Of Legends, Lviv",
       "layout": "square"
     },
     {
       "file": "lviv-04",
-      "alt": "lviv-04",
+      "alt": "A bright blue Renault 6 (1968 - 1986)",
       "layout": "landscape"
     },
     {
       "file": "lviv-05",
-      "alt": "lviv-05",
+      "alt": "A beautifully decorated city",
       "layout": "landscape"
     },
     {
       "file": "lviv-06",
-      "alt": "lviv-06",
+      "alt": "Toyota Tercel/Corsa (1982 - 1999)",
       "layout": "landscape"
     },
     {
       "file": "lviv-07",
-      "alt": "lviv-07",
+      "alt": "Potocki Palace (1880)",
       "layout": "landscape"
     },
     {
       "file": "lviv-08",
-      "alt": "lviv-08",
+      "alt": "",
       "layout": "portrait"
     },
     {
       "file": "lviv-09",
-      "alt": "lviv-09",
+      "alt": "The \"Disinterested Dad\"",
       "layout": "landscape"
     },
     {
       "file": "lviv-10",
-      "alt": "lviv-09",
+      "alt": "Saints Peter and Paul Garrison Church",
       "layout": "portrait"
     },
     {
-      "file": "lviv-11",
-      "alt": "lviv-11",
-      "layout": "landscape"
-    },
-    {
       "file": "lviv-12",
-      "alt": "lviv-01",
+      "alt": "",
       "layout": "portrait"
     },
     {
       "file": "lviv-13",
-      "alt": "lviv-01",
+      "alt": "Lviv - The (toy) city of the lion (tilt shift)",
       "layout": "landscape"
     },
     {
       "file": "lviv-14",
-      "alt": "lviv-01",
+      "alt": "City lights",
       "layout": "panoramic"
     }
   ]

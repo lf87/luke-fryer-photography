@@ -5,37 +5,37 @@
   "images": [
     {
       "file": "macro-01",
-      "alt": "macro-01",
+      "alt": "A common housefly keeping clean",
       "layout": "landscape"
     },
     {
       "file": "macro-02",
-      "alt": "macro-02",
+      "alt": "",
       "layout": "landscape"
     },
     {
       "file": "macro-03",
-      "alt": "macro-03",
+      "alt": "",
       "layout": "portrait"
     },
     {
       "file": "macro-04",
-      "alt": "macro-04",
+      "alt": "",
       "layout": "landscape"
     },
     {
       "file": "macro-05",
-      "alt": "macro-05",
+      "alt": "",
       "layout": "square"
     },
     {
       "file": "macro-06",
-      "alt": "macro-06",
+      "alt": "",
       "layout": "landscape"
     },
     {
       "file": "macro-07",
-      "alt": "macro-07",
+      "alt": "",
       "layout": "landscape"
     }
   ]

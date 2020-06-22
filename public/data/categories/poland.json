@@ -1,106 +1,101 @@
 {
   "name": "poland",
   "largeHeading": "Poland",
-  "smallHeading": "",
+  "smallHeading": "Gdansk, Sopot, and Malbork Castle",
   "images": [
     {
       "file": "poland-08",
-      "alt": "poland-01",
+      "alt": "Golden Gate (1612), Gdansk",
       "layout": "landscape"
     },
     {
       "file": "poland-02",
-      "alt": "poland-02",
+      "alt": "Some restaurants alongside the Motława river",
       "layout": "landscape"
     },
     {
       "file": "poland-03",
-      "alt": "poland-03",
+      "alt": "The big building in the middle is Straganiarska Gate",
       "layout": "landscape"
     },
     {
       "file": "poland-04",
-      "alt": "poland-04",
-      "layout": "portrait"
-    },
-    {
-      "file": "poland-05",
-      "alt": "poland-05",
+      "alt": "Decorative architecture, Long Market, Gdansk",
       "layout": "portrait"
     },
     {
       "file": "poland-01",
-      "alt": "poland-06",
+      "alt": "The Motława has a total length of 68km",
       "layout": "landscape"
+    },
+    {
+      "file": "poland-05",
+      "alt": "Decorative architecture, Long Market, Gdansk",
+      "layout": "portrait"
     },
     {
       "file": "poland-07",
-      "alt": "poland-07",
+      "alt": "Blue-and-yellow Macaw",
       "layout": "panoramic"
     },
     {
-      "file": "poland-08",
-      "alt": "poland-08",
-      "layout": "landscape"
-    },
-    {
       "file": "poland-09",
-      "alt": "poland-09",
+      "alt": "Inside Marlbork Castle",
       "layout": "portrait"
     },
     {
       "file": "poland-10",
-      "alt": "poland-09",
+      "alt": "13th-century Teutonic castle & fortress, Malbork",
       "layout": "landscape"
     },
     {
       "file": "poland-11",
-      "alt": "poland-11",
+      "alt": "Teutonic order statue",
       "layout": "landscape"
     },
     {
       "file": "poland-12",
-      "alt": "poland-01",
+      "alt": "Shrine",
       "layout": "portrait"
     },
     {
       "file": "poland-13",
-      "alt": "poland-01",
+      "alt": "Marlbork Castle",
       "layout": "landscape"
     },
     {
       "file": "poland-14",
-      "alt": "poland-01",
+      "alt": "Light trails over the Motława",
       "layout": "landscape"
     },
     {
       "file": "poland-15",
-      "alt": "poland-01",
+      "alt": "The fairytale inspired Krzywy Domek (2004), Sopot",
       "layout": "landscape"
     },
     {
       "file": "poland-16",
-      "alt": "poland-01",
+      "alt": "Gravity defying art by Jerzy Kedziora, Sopot",
       "layout": "portrait"
     },
     {
       "file": "poland-17",
-      "alt": "poland-01",
+      "alt": "Long Market, Gdansk",
       "layout": "portrait"
     },
     {
       "file": "poland-18",
-      "alt": "poland-01",
+      "alt": "The eye of Gdansk",
       "layout": "panoramic"
     },
     {
       "file": "poland-19",
-      "alt": "poland-01",
+      "alt": "Malbork train station",
       "layout": "landscape"
     },
     {
       "file": "poland-20",
-      "alt": "poland-01",
+      "alt": "River Nogat, Marlbork Castle",
       "layout": "panoramic"
     }
   ]
