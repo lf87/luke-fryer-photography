@@ -11,6 +11,7 @@ $c-spindle: #b4d4ee;
 $spacing: 15px;
 $spacing-multipliers: (
   'xs': 2,
+  'xxs': 2,
   'sm': 3,
   'md': 4,
   'lg': 5,
@@ -20,6 +21,7 @@ $spacing-multipliers: (
 // Breakpoints
 $breakpoints: (
   '0': 0,
+  'xxs': 360px,
   'xs': 480px,
   'sm': 768px,
   'md': 991px,

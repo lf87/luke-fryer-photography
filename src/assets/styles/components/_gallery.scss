@@ -36,7 +36,7 @@
 }
 
 .gallery__desc {
-  @include font-size(13px);
+  @include font-size(12px);
   background-color: rgba($c-black, 0.7);
   bottom: 0;
   color: $c-white;
@@ -47,10 +47,6 @@
   padding-right: 0.5em;
   padding-top: 0.35em;
   position: absolute;
-
-  @include bp(sm) {
-    @include font-size(12px);
-  }
 }
 
 .gallery__btn {

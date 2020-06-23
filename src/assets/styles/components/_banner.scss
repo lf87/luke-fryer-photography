@@ -170,24 +170,17 @@
   display: flex;
   justify-content: center;
   left: calc(50% - 1.5rem);
-  opacity: 0;
+  opacity: 0.6;
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 1rem;
   position: absolute;
-  // @include transition(opacity transform, 0.5s, ease-in-out, 0.5s);
-  transition: opacity 1s ease-in-out 1s, transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
   width: 3rem;
 
   &:hover {
     transform: translate3d(0, 1px, 0);
-  }
-}
-
-.banner__down-arrow {
-  .transitions-active & {
-    opacity: 0.6;
   }
 }
 

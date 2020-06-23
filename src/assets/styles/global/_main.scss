@@ -7,16 +7,20 @@ html {
     font-size: 18px;
   }
 
+  @include bp(xxs) {
+    font-size: 19px;
+  }
+
   @include bp(sm) {
     font-size: 20px;
   }
 
   @include bp(md) {
-    font-size: 23px;
+    font-size: 21px;
   }
 
   @include bp(lg) {
-    font-size: 27px;
+    font-size: 22px;
   }
 }
 
